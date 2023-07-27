@@ -16,7 +16,7 @@ class ProgramsController < ApplicationController
     @program.user = current_user
 
     if @program.save
-      redirect_to @program, notice: "Program criado com sucesso"
+      redirect_to @program, notice: "Programa criado com sucesso"
     else
       render :new
     end
