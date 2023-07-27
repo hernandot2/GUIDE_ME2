@@ -1,0 +1,14 @@
+<div class="container">
+  <%= form_with(model: program) do |f| %>
+      <%= f.label :name, style: "display: block" %>
+      <%= f.text_field :name %>
+  
+      <%= f.label :description, style: "display: block" %>
+      <%= f.text_field :description %>
+  
+      <%= f.label :category, style: "display: block" %>
+      <%= f.select :category, %w[ruby rails po pm] %>
+  
+      <div><%= f.submit %></div>
+  <% end %>
+</div>
