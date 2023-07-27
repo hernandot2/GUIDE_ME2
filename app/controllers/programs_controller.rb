@@ -8,9 +8,18 @@ class ProgramsController < ApplicationController
   end
 
   def new
+    @program = Program.new
   end
 
   def create
+    @program = Program.new(program_params)
+    @program.user = current_user
+
+    if @program.save
+      redirect_to @program, notice: "Programa criado com sucesso"
+    else
+      render :new
+    end
   end
 
   def edit
@@ -21,4 +30,10 @@ class ProgramsController < ApplicationController
 
   def destroy
   end
+end
+
+private
+
+def program_params
+  params.require(:program).permit(:name, :description, :category)
 end
