@@ -1,1 +1,10 @@
 <h1>NEW PROGRAM</h1>
+
+<%= render "form", program: @program %>
+
+<br>
+
+<div>
+  <%= link_to "Create program", @program %> |
+  <%= link_to "Back to program", programs_path %>
+</div>
