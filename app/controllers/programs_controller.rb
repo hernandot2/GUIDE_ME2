@@ -28,12 +28,16 @@ class ProgramsController < ApplicationController
   def update
   end
 
-  def destroy
+   def destroy
+    @program = Program.find(params[:id])
+    @program.destroy
+    redirect_to programs_path, notice: "Programa excluído com sucesso"
   end
-end
+
 
 private
 
 def program_params
   params.require(:program).permit(:name, :description, :category)
+end
 end
