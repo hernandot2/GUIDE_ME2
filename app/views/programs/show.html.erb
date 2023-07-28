@@ -5,20 +5,15 @@
   <p><%= @program.description %></p>
   <p><%= @program.user.email %></p>
 
-
-
-
   <div class="m-1">
     <p>
       <span>
-        <%= link_to "Delete Program", @program, method: :delete %>
+        <%= link_to "Delete", @program, method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
       </span>
       |
       <span>
-        <%= link_to "Back to program", programs_path %>
+        <%= link_to "Back to programs", programs_path %>
       </span>
     </p>
   </div>
-
-
 </div>
