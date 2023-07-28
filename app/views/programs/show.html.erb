@@ -1,9 +1,24 @@
-<h1><%= @program.name %></h1>
+<div class="container">
+  <h1><%= @program.name %></h1>
 
-<p><%= @program.category %></p>
-<p><%= @program.description %></p>
-<p><%= @program.user.email %></p>
+  <p><%= @program.category %></p>
+  <p><%= @program.description %></p>
+  <p><%= @program.user.email %></p>
 
-<div>
-  <%= link_to "Back to program", programs_path %>
+
+
+
+  <div class="m-1">
+    <p>
+      <span>
+        <%= link_to "Delete Program", @program, method: :delete %>
+      </span>
+      |
+      <span>
+        <%= link_to "Back to program", programs_path %>
+      </span>
+    </p>
+  </div>
+
+
 </div>
