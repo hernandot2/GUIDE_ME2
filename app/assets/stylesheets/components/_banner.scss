@@ -1,5 +1,14 @@
 .banner-heading {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid $neutral-05;
+}
+.banner-heading h1{
   color: $primary-05;
   font-size: 56px;
   font-weight: bold;
 }
+.banner-heading h5{
+  color: $neutral-05;
+}
+
