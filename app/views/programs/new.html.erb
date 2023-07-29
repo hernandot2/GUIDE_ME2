@@ -1,9 +1,9 @@
-<h1>NEW PROGRAM</h1>
+<div class="container">
+  <h1>adicionar novo programa</h1>
+  <%= render "form", program: @program, class: "simple-form" %>
+  <br>
 
-<%= render "form", program: @program %>
-
-<br>
-
-<div>
-  <%= link_to "Back to program", programs_path %>
+  <div>
+    <%= link_to "Back to program", programs_path %>
+  </div>
 </div>

@@ -8,11 +8,11 @@
   <div class="m-1">
     <p>
       <span>
-        <%= link_to "Delete", @program, method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        <%= link_to "deletar programa", program_path(@program), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que deseja apagar esse programa?" }%>
       </span>
       |
       <span>
-        <%= link_to "Back to programs", programs_path %>
+        <%= link_to "voltar para programas", programs_path %>
       </span>
     </p>
   </div>

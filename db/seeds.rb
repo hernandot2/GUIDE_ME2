@@ -8,8 +8,6 @@ program.save!
 program = Program.new(user: user, category: "ruby", name: "aprenda ruby", description: "esse programa também é massa")
 program.save!
 
-
-
 20.times do
   user = User.new(
 
