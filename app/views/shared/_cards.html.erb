@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="row">
+    <% @programs.each do |program| %>
+      <div class="col-md-3 mb-4">
+        <div class="card-program shadow-sm">
+          <div class="card-header px-3">
+            <h5 class="m-0 p-0"><strong><%= link_to program.name, program_path(program)  %></strong></h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text px-3 py-2"><%= program.description %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>

@@ -1,0 +1,46 @@
+.btn-flat {
+  color: $neutral-01;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: $primary-05;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: $primary-06;
+  color: $neutral-01;
+}
+
+.btn-flat:active {
+  background: $primary-08;
+  color: $neutral-01;
+}
+.btn-flat:focus {
+  background: $primary-05;
+  color: $neutral-01;
+  box-shadow: 0px 0px 0px 4px $primary-03;
+}
+
+
+.btn-ghost {
+  color: $primary-05;
+  border: 1px solid $primary-05;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  color: $primary-05;
+  border: 1px solid $primary-05;
+  background-color: $neutral-02;
+}
+.btn-ghost:active {
+  background: $primary-08;
+  color: $neutral-01;
+}
+.btn-ghost:focus {
+  background: $neutral-02;
+  color: $primary-05;
+  box-shadow: 0px 0px 0px 4px $primary-05;
+}

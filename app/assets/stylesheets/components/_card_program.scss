@@ -1,0 +1,28 @@
+.card-program {
+  border: 2px solid #253664;
+  font-weight: bolder;
+  border-radius: 8px;
+  min-height: 332px;
+}
+
+.card-header h5 {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.card-header:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  background-color: $neutral-02;
+  color: $blue;
+  height: 70px;
+}
+.card-text {
+  font-size: 14px;
+  font-weight: 350;
+  color: #767676;
+}

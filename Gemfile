@@ -19,6 +19,8 @@ gem "puma", "~> 5.0"
 gem "jsbundling-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
@@ -29,6 +31,7 @@ gem "jbuilder"
 
 gem "devise"
 
+gem "faker", "~> 3.2"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
