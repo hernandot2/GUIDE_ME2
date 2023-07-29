@@ -10,24 +10,24 @@ program.save!
 
 
 
-# 20.times do
-#   user = User.new(
-#     name:           Faker::Company.name,
-#     description:    Faker::Lorem.paragraphs(number:1),
-#     email:          Faker::Internet.email,
-#     password:       "123123",
-#     job:            Faker::Job.field
-#   )
-#   user.save!
-# end
+20.times do
+  user = User.new(
+    name:           Faker::Company.name,
+    description:    Faker::Lorem.paragraphs(number:1),
+    email:          Faker::Internet.email,
+    password:       "123123",
+    job:            Faker::Job.field
+  )
+  user.save!
+end
 
-# 20.times do
-#   category = Faker::Job.field
-#   program = Program.new(
-#     name:           category,
-#     description:    Faker::Lorem.paragraphs(number:1),
-#     category:       category,
-#     user:        User.find(rand(1..20))
-#   )
-#   program.save!
-# end
+20.times do
+  category = Faker::Job.field
+  program = Program.new(
+    name:           category,
+    description:    Faker::Lorem.paragraphs(number:1),
+    category:       category,
+    user:        User.find(rand(1..20))
+  )
+  program.save!
+end
