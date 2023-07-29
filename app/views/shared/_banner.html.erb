@@ -1,0 +1,16 @@
+<div class="py-5">
+  <div class="container">
+    <h1 class="banner-heading">explore novas direções</h1>
+    <h1 class="banner-heading">para sua carreira</h1>
+    <h5>encontre programas de mentoria e aprenda com os melhores de cada área</h5>
+      <div>
+        <% if user_signed_in? %>
+          <%= link_to "explorar programas", programs_path, class: "btn btn-ghost" %>
+        <% else %>
+          <%= link_to "explorar programas", programs_path, class: "btn btn-ghost" %>
+          <%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat" %>
+        <% end %>
+      </div>
+  </div>
+</div>
+

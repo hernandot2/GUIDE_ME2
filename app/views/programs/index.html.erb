@@ -1,9 +1,3 @@
-<h1>GUIDE ME PLS</h1>
+<%= render "shared/cards" %>
 
-<ul>
-  <% @programs.each do |program| %>
-    <li><%= link_to program.name, program_path(program) %></li>
-  <% end %>
-</ul>
-<%= link_to "Add new program", new_program_path %>
 
