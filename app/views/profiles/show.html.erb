@@ -4,7 +4,7 @@
     <h1><%= @user.name %></h1>
       <div>
         <% if user_signed_in? %>
-          <%= link_to "entre em contato", programs_path, class: "btn-flat" %>
+          <%= link_to "entre em contato", contact_path, class: "btn-flat" %>
         <% else %>
           <%= link_to "explorar programas", programs_path, class: "btn btn-ghost" %>
           <%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat" %>
