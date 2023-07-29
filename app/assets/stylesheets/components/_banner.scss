@@ -1,6 +1,7 @@
 .banner-heading {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 2px solid $neutral-05;
 }
 .banner-heading h1{

@@ -1,28 +1,32 @@
 
-<div class="py-5">
-  <div class="container">
-    <h1><%= @user.name %></h1>
+<div id="banner-profile" class="py-5">
+  <div class="container banner-heading">
+    <div>
+      <h1><%= @user.name %></h1>
       <div>
         <% if user_signed_in? %>
           <%= link_to "entre em contato", contact_path, class: "btn-flat" %>
         <% else %>
-          <%= link_to "explorar programas", programs_path, class: "btn btn-ghost" %>
           <%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat" %>
         <% end %>
       </div>
+    </div>
+      <%= image_tag "illustration-mentor.svg" %>
   </div>
 </div>
 
 <div class="container">
-
-
 <h3> meus programas de mentoria </h3>
 <div class="m-1">
 <% @programs.each do |program| %>
-  <div class="card-box px-1">
-  <h5 class="m-0 p-0"><strong><%= link_to program.name, program_path(program)  %></strong></h5>
-   </div>
+  <ul>
+      <div class="card-box px-1">
+    <li>
+    <h5 class="m-0 p-0"><strong><%= link_to program.name, program_path(program)  %></strong></h5>
+    </li>
+     </div>
    <p class="card-text px-3 py-2"><%= program.description %></p>
+  </ul>
 <% end %>
 
 <%= link_to "Voltar", root_path %>
