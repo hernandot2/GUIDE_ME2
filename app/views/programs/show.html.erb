@@ -3,7 +3,7 @@
 
   <p><%= @program.category %></p>
   <p><%= @program.description %></p>
-  <p><%= @program.user.email %></p>
+  <p><%= link_to @program.user.name, profile_path(@program.user_id) %></p>
 
   <div class="m-1">
     <p>
@@ -12,8 +12,9 @@
       </span>
       |
       <span>
-        <%= link_to "voltar para programas", programs_path %>
+        <%= link_to "editar programa", edit_program_path(@program) %>
       </span>
     </p>
+    <%= link_to "voltar para programas", programs_path, class: "btn btn-ghost" %>
   </div>
 </div>
