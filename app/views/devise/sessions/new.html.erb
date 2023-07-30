@@ -1,10 +1,10 @@
-<div class="container mt-4">
+<div class="login-form">
   <h2>Log in</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
-      <%= f.input :email,
-                  required: false,
+      <%= f.input :email, error: "e-mail é obrigatório, por favor especifique um",
+                  required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" } %>
       <%= f.input :password,
@@ -14,7 +14,7 @@
     </div>
 
     <div class="form-actions mb-2">
-        <%= f.button :submit, "Log in", class: "btn btn-flat"%>
+        <%= f.button :submit, "Log in", class: "btn btn-flat btn-login"%>
     </div>
   <% end %>
 
