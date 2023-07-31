@@ -1,0 +1,16 @@
+<div class="mt-5">
+  <div class="profile-cards">
+    <% @user_programs.each do |program| %>
+      <div class="card-small mb-5 shadow">
+        <div class="d-flex">
+          <div class="card-small-header px-3">
+            <h5 class="m-0 p-0"><strong><%= link_to program.name, program_path(program), class: "text-decoration-none"  %></strong></h5>
+          </div>
+          <div class="card-small-body d-flex align-items-center">
+            <p class="card-small-text px-3"><%= program.description %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

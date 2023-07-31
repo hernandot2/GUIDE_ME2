@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @programs = Program.all
+    @all_programs = Program.all
+    @programs = @all_programs.take(8)
   end
 
   def contact

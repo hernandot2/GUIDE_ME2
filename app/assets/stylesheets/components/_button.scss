@@ -2,6 +2,8 @@
   font-weight: 600;
 }
 
+// btn-flat
+
 .btn-flat {
   color: $neutral-01;
   padding: 8px 24px;
@@ -25,6 +27,7 @@
   box-shadow: 0px 0px 0px 4px $primary-03;
 }
 
+// btn-gost
 
 .btn-ghost {
   color: $primary-05;
@@ -51,4 +54,17 @@
 
 .btn-login {
   text-align: center;
+}
+
+// button-container
+
+.button-container {
+  display: flex;
+  gap: 0px 16px;
+}
+
+// button-banner
+
+.button-banner {
+  width: 200px;
 }

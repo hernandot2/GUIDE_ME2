@@ -1,18 +1,36 @@
-<h2>Forgot your password?</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+<section class="h-100">
+  <div class="container pt-5">
+    <div class="col-lg d-flex justify-content-center align-items-center">
+      <div class="col-lg d-flex justify-content-center">
+        <%= image_tag "illustration-logo-login.svg", class: "illustration-login d-none d-lg-block"%>
+      </div>
+      <div class="col-lg d-flex flex-column justify-content-center align-items-center">
+        <div class="col-lg d-flex flex-column justify-content-center align-items-center mb-3">
+          <h1>log in</h1>
+          <h5>acesse a plataforma</h5>
+        </div>
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= f.error_notification %>
+          <div class="form-inputs align-items-center">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+          </div>
+          <div class="form-actions mb-3">
+            <%= f.button :submit, "enviar link de redefinição", class: "btn btn-flat w-100" %>
+          </div>
+        <% end %>
+        <div>
+          <div class="d-flex justify-content-center ml-3">
+            <p class="text-muted">lembrou a senha?</p>
+            <span style="margin-left: 8px;"><%= link_to "entrar", new_session_path(resource_name), class: "text-decoration-none" %></span>
+          </div>
+          <div class="d-flex justify-content-center ml-3">
+            <p class="text-muted">não tem conta?</p>
+            <span style="margin-left: 8px;"><%= link_to "cadastre-se", new_registration_path(resource_name), class: "text-decoration-none" %></span>
+          </div>
+        </div>
+      </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>

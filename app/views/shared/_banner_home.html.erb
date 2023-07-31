@@ -1,0 +1,25 @@
+<div id="banner-home" class="container banner-home py-5">
+  <div class="banner-heading justify-content-between">
+    <div>
+      <div>
+        <h1>explore novas direções para sua carreira</h1>
+        <h5>encontre programas de mentoria e aprenda com os melhores de cada área</h5>
+      </div>
+      <div>
+        <% if user_signed_in? %>
+          <div class="button-container pt-3">
+            <%= link_to "explorar programas", programs_path, class: "btn btn-ghost" %>
+          </div>
+        <% else %>
+          <div class="button-container pt-3">
+            <%= link_to "explorar programas", programs_path, class: "btn btn-ghost button-banner" %>
+            <%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat button-banner" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div>
+      <%= image_tag "illustration-home.svg", id: "illustration-home", class: "d-none d-lg-block" %>
+    </div>
+  </div>
+</div>

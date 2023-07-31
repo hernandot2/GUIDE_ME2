@@ -9,33 +9,38 @@
           <h1>log in</h1>
           <h5>acesse a plataforma</h5>
         </div>
-      
-
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-inputs align-items-center">
-
-          <%# email input %>
-          <%= f.input :email, error: "e-mail é obrigatório, por favor especifique um",
-                    label: "e-mail",
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "email" }%>
-
-          <%# password input %>
-          <%= f.input :password,
-                    label: "senha",
-                    required: false,
-                    input_html: { autocomplete: "current-password" } %>
-
-          <%# remember me input %>
-          <%= f.input :remember_me, label: "lembrar meus dados", as: :boolean if devise_mapping.rememberable? %>
-        </div>
-        <div class="form-actions mb-3">
-          <%= f.button :submit, "entre", class: "btn btn-flat w-100"%>
-        </div>
-
-        <%= link_to "esqueci a senha", new_password_path(resource_name), class: "d-flex justify-content-center" %>
-        <p class="d-flex justify-content-center">não tem conta?<%= link_to "cadastre-se", new_registration_path(resource_name)%></p>
+          <%= f.error_notification %>
+          <div class="form-inputs align-items-center">
+            <%# email input %>
+            <%= f.input :email, error: "e-mail é obrigatório, por favor especifique um",
+                        label: "e-mail",
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" }%>
+            <%# password input %>
+            <%= f.input :password,
+                        label: "senha",
+                        required: false,
+                        input_html: { autocomplete: "current-password" } %>
+            <%# remember me input %>
+            <%= f.input :remember_me, label: "lembrar meus dados", as: :boolean if devise_mapping.rememberable? %>
+          </div>
+          <%# submit button %>
+          <div class="form-actions mb-3">
+            <%= f.button :submit, "entrar", class: "btn btn-flat w-100"%>
+          </div>
         <% end %>
+        <div>
+          <%# forgot password %>
+          <%= link_to "esqueci a senha", new_password_path(resource_name), class: "d-flex justify-content-center text-decoration-none" %>
+          <%# register %>
+          <div class="d-flex justify-content-center ml-3">
+            <p class="text-muted">não tem conta?</p>
+            <span style="margin-left: 8px;"><%= link_to "cadastre-se", new_registration_path(resource_name), class: "text-decoration-none" %></span>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
 </section>
