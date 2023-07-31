@@ -1,0 +1,17 @@
+<div id="banner-profile" class="py-5">
+  <div class="container banner-heading justify-content-between">
+    <div class="banner-avatar">
+      <%= image_tag "avatar.svg", id: "avatar-profile", class: "avatar-large" %>
+    </div>
+    <div class="row">
+      <h1><%= @user.name %></h1>
+      <div>
+        <% if user_signed_in? %>
+          <div class="button-container"><%= link_to "entre em contato", contact_path, class: "btn-flat align-items-end" %></div>
+        <% else %>
+          <div class="button-container"><%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat align-items-end" %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

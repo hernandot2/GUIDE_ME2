@@ -1,5 +1,5 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon mx-5">
-  <div class="container-fluid">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container">
     <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "logo.svg" %>
     <% end %>
@@ -19,6 +19,8 @@
               <%= link_to "sair", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
+        <% elsif devise_controller? %>
+
         <% else %>
           <li class="nav-item">
             <%= link_to "login", new_user_session_path, class: "nav-link" %>

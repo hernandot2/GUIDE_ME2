@@ -16,7 +16,7 @@ class ProgramsController < ApplicationController
     @program.user = current_user
 
     if @program.save
-      redirect_to @program, notice: "Programa criado com sucesso"
+      redirect_to @program, notice: "programa criado com sucesso"
     else
       render :new
     end
@@ -29,7 +29,7 @@ class ProgramsController < ApplicationController
   def update
     @program = Program.find(params[:id])
     if @program.update(program_params)
-      redirect_to @program, notice: 'Programa atualizado com sucesso'
+      redirect_to @program, notice: 'programa atualizado com sucesso'
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class ProgramsController < ApplicationController
   def destroy
     @program = Program.find(params[:id])
     @program.destroy
-    redirect_to programs_path, notice: "Programa excluído com sucesso"
+    redirect_to programs_path, notice: "programa excluído com sucesso"
   end
 
   private

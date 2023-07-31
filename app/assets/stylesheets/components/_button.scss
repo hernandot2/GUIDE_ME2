@@ -1,7 +1,13 @@
+.btn {
+  font-weight: 600;
+}
+
+// btn-flat
+
 .btn-flat {
   color: $neutral-01;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: $border-radius-lg;;
   background: $primary-05;
   transition: background 0.3s ease;
 }
@@ -21,18 +27,19 @@
   box-shadow: 0px 0px 0px 4px $primary-03;
 }
 
+// btn-gost
 
 .btn-ghost {
   color: $primary-05;
-  border: 1px solid $primary-05;
+  border: 2px solid $primary-05;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: $border-radius-lg;;
   transition: opacity 0.3s ease;
 }
 
 .btn-ghost:hover {
   color: $primary-05;
-  border: 1px solid $primary-05;
+  border: 2px solid $primary-05;
   background-color: $neutral-02;
 }
 .btn-ghost:active {
@@ -43,4 +50,21 @@
   background: $neutral-02;
   color: $primary-05;
   box-shadow: 0px 0px 0px 4px $primary-05;
+}
+
+.btn-login {
+  text-align: center;
+}
+
+// button-container
+
+.button-container {
+  display: flex;
+  gap: 0px 16px;
+}
+
+// button-banner
+
+.button-banner {
+  width: 200px;
 }
