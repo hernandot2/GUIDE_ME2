@@ -49,3 +49,17 @@
   font-weight: 400;
   text-decoration: none;
 }
+
+
+.left-column {
+  background-color: #D9D9D9;
+  padding: 1.25rem; /* Adiciona um padding similar ao .card-body */
+  }
+
+
+  .card-with-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #253664;
+  border-radius: 8px;
+  overflow: hidden; /* Garante que o conteúdo interno não vaze */
+  }
