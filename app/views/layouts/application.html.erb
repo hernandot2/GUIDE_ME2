@@ -11,8 +11,12 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
+    <% unless controller_name = "new_session" || controller_name = "new_registration" %>
+      <%= render "layouts/navbar" %>
+    <% end %>
     <%= yield %>
-    <%= render "shared/footer" %>
+      <% unless controller_name = "new_session" || controller_name = "new_registration" %>
+    <%= render "layouts/footer" %>
+  <% end %>
   </body>
 </html>

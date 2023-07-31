@@ -1,7 +1,11 @@
+.btn {
+  font-weight: 600;
+}
+
 .btn-flat {
   color: $neutral-01;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: $border-radius-lg;;
   background: $primary-05;
   transition: background 0.3s ease;
 }
@@ -24,15 +28,15 @@
 
 .btn-ghost {
   color: $primary-05;
-  border: 1px solid $primary-05;
+  border: 2px solid $primary-05;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: $border-radius-lg;;
   transition: opacity 0.3s ease;
 }
 
 .btn-ghost:hover {
   color: $primary-05;
-  border: 1px solid $primary-05;
+  border: 2px solid $primary-05;
   background-color: $neutral-02;
 }
 .btn-ghost:active {
