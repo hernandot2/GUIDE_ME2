@@ -1,8 +1,8 @@
-.banner-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+// .banner-heading {
+//   display: grid;
+//   grid-template-columns: ;
+//   justify-content: space-between;
+// }
 .banner-heading h1{
   color: $primary-05;
   font-size: 56px;
@@ -25,4 +25,8 @@
 
 .banner-avatar {
   width: 2rem;
+}
+
+.program-description {
+  width: 40%;
 }
