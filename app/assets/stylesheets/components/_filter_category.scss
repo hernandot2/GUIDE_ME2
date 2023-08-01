@@ -1,0 +1,8 @@
+.category-menu {
+  margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* os itens se movem para a próxima linha se não houver espaço suficiente */
+    gap: 10px; /* Espaço entre os botões */
+    justify-content: center;
+
+}

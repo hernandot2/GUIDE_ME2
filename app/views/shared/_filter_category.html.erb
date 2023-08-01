@@ -1,0 +1,6 @@
+<div class="category-menu">
+<%= link_to "Todos", root_path, class: "btn-ghost-filter" %>
+  <% %w[Ruby JS CSS PMI Produtividade C# Empregos Exterior Python Mindset].each do |category| %>
+    <%= link_to category, root_path(category: category), class: "btn-ghost-filter" %>
+  <% end %>
+</div>
