@@ -1,0 +1,20 @@
+<div id="banner-program" class="container py-5">
+  <div class="banner-heading justify-content-between">
+    <div>
+      <div id="banner-program-text">
+        <h1><%= @program.name %></h1>
+        <h5><%= @program.category %></h5>
+      </div>
+      <div  class="button-container">
+        <% if user_signed_in? %>
+          <div><%= link_to "inscrever", contact_path, class: "btn-flat align-items-end text-decoration-none" %></div>
+        <% else %>
+          <div><%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat align-items-end text-decoration-none" %></div>
+        <% end %>
+      </div>
+    </div>
+    <div>
+      <%= image_tag "illustration-program-page.svg", id: "illustration-program", class: "d-none d-lg-block" %>
+    </div>
+  </div>
+</div>

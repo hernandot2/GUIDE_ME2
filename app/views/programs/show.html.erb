@@ -1,20 +1,8 @@
 <div class="container">
-  <h1><%= @program.name %></h1>
+  <%= render "shared/banner_program" %>
+    <%= link_to "editar programa", edit_program_path(@program) %>
+<div class="program-page">
+  <h2>sobre o programa</h2>
 
-  <p><%= @program.category %></p>
-  <p><%= @program.description %></p>
-  <p><%= link_to @program.user.name, profile_path(@program.user_id) %></p>
-
-  <div class="m-1">
-    <p>
-      <span>
-        <%= link_to "deletar programa", program_path(@program), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que deseja apagar esse programa?" }%>
-      </span>
-      |
-      <span>
-        <%= link_to "editar programa", edit_program_path(@program) %>
-      </span>
-    </p>
-    <%= link_to "voltar para programas", programs_path, class: "btn btn-ghost" %>
-  </div>
+ <%= simple_format(@program.description), class: "program-description" %>
 </div>

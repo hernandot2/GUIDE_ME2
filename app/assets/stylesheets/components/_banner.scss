@@ -12,11 +12,14 @@
   color: $neutral-05;
 }
 
-#banner-home, #banner-profile {
+#banner-home, #banner-profile, #banner-program {
   border-bottom: 2px solid $neutral-05;
 }
 
 #illustration-home {
+  width: 350px;
+}
+#illustration-program{
   width: 350px;
 }
 
