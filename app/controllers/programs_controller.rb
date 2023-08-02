@@ -1,7 +1,12 @@
 class ProgramsController < ApplicationController
   def index
-    @programs = Program.all
+    if params[:category]
+      @programs = Program.where(category: params[:category])
+    else
+      @programs = Program.all
+    end
   end
+
 
   def show
     @program = Program.find(params[:id])
