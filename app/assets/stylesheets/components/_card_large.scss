@@ -24,18 +24,21 @@
   color: $primary-05;
   height: 70px;
 }
-.card-large-text {
+.card-large-text-container {
   font-size: 14px;
   font-weight: 350;
   color: $neutral-05;
   display: -webkit-box;
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
-  font-size: 14px;
-  font-weight: 350;
-  color: $neutral-05;
+  line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.card-large-text {
+  margin: 0; /* Remove any default margin */
+  white-space: normal; /* Reset to allow wrapping inside the container */
 }
 
 .card-large-user {
@@ -52,7 +55,12 @@
 }
 
 .card-large-user-info-link {
-  color: $primary-04;
+  color: $neutral-05;
+  font-weight: 600;
+  text-decoration: none;
+}
+.card-large-user-info-job {
+  color: $neutral-05;
   font-weight: 400;
   text-decoration: none;
 }

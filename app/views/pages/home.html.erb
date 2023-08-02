@@ -1,3 +1,32 @@
 <%= render "shared/banner_home" %>
 <%= render "shared/filter_category" %>
-<%= render "shared/card_large" %>
+
+<%# cards %>
+<div class="mt-5">
+  <div class="row">
+    <% @programs.take(8).each do |program| %>
+      <div class="program-cards col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-5">
+        <div class="card-large shadow">
+          <div class="card-large-header px-3">
+            <h5 class="m-0 p-0"><strong><%= link_to program.name, program_path(program), class: "text-decoration-none" %></strong></h5>
+          </div>
+          <div class="card-large-body">
+            <div class="card-large-text-container">
+              <p class="card-large-text px-3 py-2"><%= program.description %></p>
+            </div>
+          </div>
+          <div class="card-large-user d-flex align-items-start mt-2">
+            <%= link_to profile_path(User.find(program.user_id)) do %>
+              <%= image_tag "avatar.svg", class: "img-fluid rounded-circle", width: 50 %>
+            <% end %>
+            <div class="card-large-user-info ml-3">
+              <div><%= link_to User.find(program.user_id).name, profile_path(User.find(program.user_id)), class: "card-large-user-info-link" %></div>
+              <div class="card-large-user-info-job"><%= User.find(program.user_id).job %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
