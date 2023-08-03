@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
   resources :programs
   resources :profiles, only: [:show, :edit, :update]
+  resources :mentorships, only: [:show]
 
 end

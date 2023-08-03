@@ -1,7 +1,5 @@
 .edit-form{
-  display: block;
-}
-
-.edit-program {
-
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }

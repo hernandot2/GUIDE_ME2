@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   def show
     @user = User.find(params[:id])
     @user_programs = @user.programs
+    @user_mentorships = @user.mentorships
   end
 
   def edit
