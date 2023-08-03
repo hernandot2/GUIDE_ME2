@@ -1,12 +1,7 @@
-<div class="container">
-<h1>Editing program</h1>
-
-<%= render "form", program: @program %>
-
+<h1>editar programa</h1>
+<%= render "form", program: @program, class: "form-edit" %>
 <br>
-
 <div>
   <%= link_to "Show this program", @program %> |
   <%= link_to "Back to program", programs_path %>
-</div>
 </div>

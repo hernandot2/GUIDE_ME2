@@ -1,14 +1,24 @@
 .profile-cards {
-  max-width: 500px;
+  max-width: 550px;
   min-height: 80px;
 }
 
 .card-small {
+  overflow: hidden;
+  border: 1px solid $primary-02;
+  font-weight: bolder;
+  border-radius: 8px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}
+.card-small:hover {
   display: flex;
   overflow: hidden;
   border: 1px solid $primary-02;
   font-weight: bolder;
   border-radius: 8px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease;
+  transform: scale(1.025);
 }
 
 .card-small-header h5 {
@@ -21,25 +31,101 @@
   width: 150px;
 }
 
-.card-small-header:first-child {
-  border-radius: 8px 0 0 8px;
+.card-small-link {
+  text-decoration: none;
+}
+.card-small-link:hover {
+  text-decoration: underline;
 }
 
 .card-small-header {
   display: flex;
   align-items: center;
-  background-color: $neutral-02;
+  background-color: $primary-01;
   color: $primary-05;
   height: 70px;
 }
-.card-small-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  font-size: 14px;
-  font-weight: 350;
-  color: $neutral-05;
-  max-height: 3em;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
+
+#edit-icon i{
+  color: $primary-04;
+}
+#delete-icon i{
+  color: $red;
+}
+
+// telas menores
+@media screen and (max-width: 575px) {
+  .card-small {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-small-header {
+    display: flex;
+    align-items: center;
+    background-color: $primary-01;
+    color: $primary-05;
+    height: 70px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 5px;
+  }
+  
+  .card-small-body {
+    flex: 1;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .card-small-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    font-weight: 400;
+    color: $neutral-06;
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 60px;
+    margin: auto 0;
+  }
+}
+
+// telas maiores
+@media screen and (min-width: 576px) {
+  .card-small {
+    flex-direction: row;
+  }
+  
+  .card-small-header {
+    display: flex;
+    align-items: center;
+    background-color: $primary-01;
+    color: $primary-05;
+    height: 70px;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .card-small-body {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 0;
+  }
+  
+  .card-small-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    font-weight: 400;
+    color: $neutral-06;
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: auto 0;
+    
+  }
 }

@@ -1,9 +1,6 @@
-<div class="container">
-  <%= render "shared/banner_program" %>
-  <%= link_to "editar programa", edit_program_path(@program) %>
-  <div class="program-page">
-    <h2>sobre o programa</h2>
-    <div class="program-description">
-      <%= @program.description %>
-    </div>
+<%= render "shared/banner_program" %>
+<div class="program-page">
+  <h2>sobre o programa</h2>
+  <div class="program-description">
+    <%= @program.description %>
   </div>

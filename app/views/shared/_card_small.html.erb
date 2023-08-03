@@ -1,16 +1,31 @@
-<div class="mt-5">
+<div class="">
   <div class="profile-cards">
     <% @user_programs.each do |program| %>
-      <div class="card-small mb-5 shadow">
-        <div class="d-flex">
-          <div class="card-small-header px-3">
-            <h5 class="m-0 p-0"><strong><%= link_to program.name, program_path(program), class: "text-decoration-none"  %></strong></h5>
-          </div>
-          <div class="card-small-body d-flex align-items-center">
-            <p class="card-small-text px-3"><%= program.description %></p>
+      <div class="card-small d-flex mb-3">
+        <div class="card-small-header px-3">
+          <h5 class="m-0 p-0"><strong><%= link_to program.name, program_path(program), class: "card-small-link"  %></strong></h5>
+        </div>
+        <div class="card-small-body d-flex   align-items-center">
+          <p class="card-small-text px-3 flex-grow-1"><%= program.description %></p>
+          <div class="icons d-flex flex-column px-3">
+          <% if program.user == current_user %>
+            <div id="edit-icon">
+              <%= link_to edit_program_path(program) do %>
+                <i class="fa-solid fa-pen-to-square"></i>
+              <% end %>
+            </div>
+            <div class="py-1"></div>
+            <div id="delete-icon">
+              <%= link_to program_path(program), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que deseja apagar esse programa?" } do %>
+                <i class="fa-solid fa-trash"></i>
+              <% end %>
+            </div>
+            <% end %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+
