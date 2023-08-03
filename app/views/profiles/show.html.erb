@@ -1,7 +1,10 @@
 <%# banner %>
 <div>
-  <%= render "shared/banner_profile" %>
+<%= render "shared/banner_profile" %>
+
+<%= link_to "Editar Perfil", edit_profile_path(@user), class: "btn btn-secondary mb-3" %>
 </div>
+
 <%# meus programas %>
 <div class="profile-programs d-flex flex-column">
   <div class="profile-programs-title mb-4">
@@ -22,3 +25,4 @@
   </div>
   <% end %>
 </div>
+
