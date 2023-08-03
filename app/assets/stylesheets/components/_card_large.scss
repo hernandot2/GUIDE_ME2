@@ -1,11 +1,38 @@
 .card-large {
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: 70px 1fr 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 1px solid $primary-02;
   font-weight: bolder;
   border-radius: 8px;
   height: 332px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}
+
+.card-large:hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid $primary-02;
+  font-weight: bolder;
+  border-radius: 8px;
+  height: 332px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+  transform: scale(1.025);
+}
+
+.card-large-header {
+  display: flex;
+  align-items: center;
+  background-color: $primary-01;
+  color: $primary-05;
+  height: 70px;
+  padding-left: 16px;
 }
 
 .card-large-header h5 {
@@ -13,47 +40,86 @@
   text-decoration: none;
 }
 
+.card-large-header:hover h5 {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
 .card-large-header:first-child {
   border-radius: 8px 8px 0 0;
 }
 
-.card-large-header {
-  display: flex;
-  align-items: center;
-  background-color: $neutral-02;
-  color: $primary-05;
-  height: 70px;
-}
-.card-large-text {
-  font-size: 14px;
+.card-large-text-container {
+  font-size: 16px;
   font-weight: 350;
-  color: $neutral-05;
-  display: -webkit-box;
-  -webkit-line-clamp: 8;
-  -webkit-box-orient: vertical;
-  font-size: 14px;
-  font-weight: 350;
-  color: $neutral-05;
+  color: $neutral-06;
+  line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex: 1;
+  display: flex; 
+  justify-content: center;
+  align-items: start;
+  margin-top: 16px;
+}
+
+.card-large-text {
+  margin: 0;
+  white-space: normal;
 }
 
 .card-large-user {
   display: flex;
-  align-items: center;
-  height: 80px;
+  align-items: flex-start;
+  padding: 16px;
+  position: relative;
 }
 
-.card-large-user img {
+.image-container {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.card-large-avatar img {
   width: 50px;
   height: 50px;
-  margin: 0 16px 16px 16px;
   border-radius: 50%;
+}
+.image-container:hover img{
+  transition: transform 0.2s ease;
+  outline: 2px solid $primary-02;
+}
+
+.card-large:hover .image-container img {
+  transition: transform 0.2s ease;
+  transform: scale(1.25);
+}
+
+.card-large-user-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 66px;
 }
 
 .card-large-user-info-link {
-  color: $primary-04;
-  font-weight: 400;
+  color: $secondary-05;
+  font-weight: 600;
   text-decoration: none;
 }
+.card-large-user-info-link:hover {
+  color: $secondary-05;
+  font-weight: 600;
+  text-decoration: underline;
+}
 
+.card-large-user-info-job {
+  color: $neutral-06;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  text-decoration: none;
+  word-break: break-word;
+}

@@ -1,18 +1,23 @@
 <div id="banner-program" class="py-5">
-  <div class="container banner-heading justify-content-between">
-    <div class="row">
-      <h1><%= @program.name %></h1>
-      <p><%= @program.description %></p>
-      <div>
+  <div class="banner-heading row justify-content-between align-items-center">
+    <div class="col-lg-6">
+      <div id="banner-program-text">
+        <h1><%= @program.name %></h1>
+      </div>
+      <div class="button-container pt-3">
         <% if user_signed_in? %>
-          <div class="button-container"><%= link_to "entre em contato", contact_path, class: "btn-flat align-items-end" %></div>
+          <div class="d-flex flex-column flex-md-row gap-3">
+            <%= link_to "inscreva-se", contact_path, class: "btn-flat m-auto text-decoration-none button-banner d-block mb-1 mb-md-0 mr-md-3" %>
+          </div>
         <% else %>
-          <div class="button-container"><%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat align-items-end" %></div>
+          <div class="both-buttons d-flex flex-column flex-md-row gap-3">
+            <%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat m-auto text-decoration-none d-block" %>
+          </div>
         <% end %>
       </div>
     </div>
-    <div>
-      <%= image_tag "illustration-mentor.svg", id: "illustration-mentor", class: "d-none d-lg-block" %>
+    <div class="col-lg-6 text-center order-lg-1">
+      <%= image_tag "illustration-program-page.svg", id: "illustration-program", class: "d-none d-lg-block float-end text-end" %>
     </div>
   </div>
 </div>

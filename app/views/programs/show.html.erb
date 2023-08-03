@@ -1,31 +1,8 @@
-<div>
-  <%= render "shared/banner_program" %>
-</div>
-
-<div class="container">
-  <div class="container-alinhamento">
-    <div class="program-text">
-      <h1> sobre </h1>
-
-      <p>
-        <%= @program.description %>
-      </p>
-    </div>
-
-    <div>
-      <%= render "shared/card_mentor" %>
-    </div>
-  </div>
-  <div class="m-1">
-    <p>
-      <span>
-        <%= link_to "deletar programa", program_path(@program), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que deseja apagar esse programa?" }%>
-      </span>
-      |
-      <span>
-        <%= link_to "editar programa", edit_program_path(@program) %>
-      </span>
-    </p>
-    <%= link_to "voltar para programas", programs_path, class: "btn btn-ghost" %>
+<%= render "shared/banner_program" %>
+<div class="program-page">
+  <h2>sobre o programa</h2>
+  <%= render "shared/card_mentor" %>
+  <div class="program-description">
+    <%= @program.description %>
   </div>
 </div>

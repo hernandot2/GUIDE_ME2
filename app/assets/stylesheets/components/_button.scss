@@ -7,14 +7,14 @@
 .btn-flat {
   color: $neutral-01;
   padding: 8px 24px;
-  border-radius: $border-radius-lg;;
+  border-radius: $border-radius-lg;
   background: $primary-05;
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
   background: $primary-06;
-  color: $neutral-01;
+  color: $primary-01;
 }
 
 .btn-flat:active {
@@ -27,27 +27,38 @@
   box-shadow: 0px 0px 0px 4px $primary-03;
 }
 
-// btn-gost
+// btn-ghost
+
+
+.btn-filter {
+  color: $primary-05;
+  border: 2px solid $primary-05;
+  padding: 2px 12px 3px;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  margin: 2px 6px;
+}
 
 .btn-ghost {
   color: $primary-05;
   border: 2px solid $primary-05;
   padding: 8px 24px;
-  border-radius: $border-radius-lg;;
+  border-radius: $border-radius-lg;
   transition: opacity 0.3s ease;
 }
 
 .btn-ghost:hover {
   color: $primary-05;
   border: 2px solid $primary-05;
-  background-color: $neutral-02;
+  background-color: $primary-01;
 }
 .btn-ghost:active {
   background: $primary-08;
   color: $neutral-01;
 }
 .btn-ghost:focus {
-  background: $neutral-02;
+  background: $primary-01;
   color: $primary-05;
   box-shadow: 0px 0px 0px 4px $primary-05;
 }
@@ -66,5 +77,29 @@
 // button-banner
 
 .button-banner {
-  width: 200px;
+  min-width: 200px;
+}
+
+
+// button delete
+.btn-delete {
+  color: $red;
+  border: 2px solid $red;
+  padding: 8px 24px;
+  border-radius: $border-radius-lg;
+  transition: opacity 0.3s ease;
+}
+
+.btn-delete:hover {
+  color: $red;
+  border: 2px solid $red;
+  background-color: $primary-01;
+}
+.btn-delete:active {
+  background: $red;
+  color: $primary-01;
+}
+.btn-delete:focus {
+  background: $secondary-01;
+  color: $red;
 }
