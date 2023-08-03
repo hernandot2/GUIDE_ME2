@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
   def home
-    @all_programs = Program.all
-    @programs = @all_programs.take(8)
+    if params[:category]
+      @programs = Program.where(category: params[:category])
+    else
+      @programs = Program.all
+    end
   end
 
   def contact

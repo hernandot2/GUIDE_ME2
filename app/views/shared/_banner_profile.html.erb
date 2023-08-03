@@ -1,16 +1,13 @@
 <div id="banner-profile" class="py-5">
-  <div class="container banner-heading justify-content-between">
-    <div class="banner-avatar">
-      <%= image_tag "avatar.svg", id: "avatar-profile", class: "avatar-large" %>
-    </div>
-    <div class="row">
-      <h1><%= @user.name %></h1>
-      <div>
-        <% if user_signed_in? %>
-          <div class="button-container"><%= link_to "entre em contato", contact_path, class: "btn-flat align-items-end" %></div>
-        <% else %>
-          <div class="button-container"><%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat align-items-end" %></div>
-        <% end %>
+  <div class="container banner-heading justify-content-center">
+    <div class="row align-items-center">
+      <div class="col-12 col-sm-2 text-center mb-3 mb-sm-0">
+      <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= image_tag "avatar.svg", id: "avatar-profile", class: "avatar-large img-fluid" %>
+      </div>
+      <div class="col-12 col-sm-10 text-sm-left">
+        <h1><%= @user.name %></h1>
+        <h5><%= @user.job %></h5>
       </div>
     </div>
   </div>

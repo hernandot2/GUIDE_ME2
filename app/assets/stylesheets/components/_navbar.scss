@@ -11,3 +11,19 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-link {
+  color: $primary-05;
+  font-weight: 700;
+}
+
+.nav-text {
+  margin: auto 6px;
+}
+
+.navbar {
+  background-color: $neutral-01;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}

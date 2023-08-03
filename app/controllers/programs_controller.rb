@@ -2,8 +2,13 @@ class ProgramsController < ApplicationController
   before_action :set_program, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @programs = policy_scope(Program)
+    if params[:category]
+      @programs = policy_scope(Program).where(category: params[:category])
+    else
+      @programs = policy_scope(Program)
+    end
   end
+
 
   def show
   end
