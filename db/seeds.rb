@@ -135,9 +135,6 @@ people = {
   }
 }
 
-
-
-
 people.each do |person, info|
   user = User.new(name: info[:name], job: info[:job],company: info[:company], description: info[:user_description], email: info[:email], password: "123123")
   user.save!
