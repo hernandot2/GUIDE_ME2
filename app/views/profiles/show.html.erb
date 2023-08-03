@@ -2,7 +2,9 @@
 <div>
 <%= render "shared/banner_profile" %>
 
-<%= link_to "Editar Perfil", edit_profile_path(@user), class: "btn btn-secondary mb-3" %>
+<% if @user == current_user %>
+  <%= link_to "Editar Perfil", edit_user_registration_path, class: "btn btn-secondary mb-3" %>
+<% end %>
 </div>
 
 <%# meus programas %>
