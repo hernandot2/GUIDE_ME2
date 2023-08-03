@@ -8,11 +8,17 @@
   <div class="m-1">
     <p>
       <span>
-        <%= link_to "deletar programa", program_path(@program), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que deseja apagar esse programa?" }%>
+        <% if @program.user == current_user %>
+          <%= link_to "editar programa", edit_program_path(@program) %>
+        <% end %>
       </span>
-      |
+      <% if @program.user == current_user %>
+        |
+      <% end %>
       <span>
-        <%= link_to "editar programa", edit_program_path(@program) %>
+        <% if @program.user == current_user %>
+          <%= link_to "deletar programa", program_path(@program), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que deseja apagar esse programa?" }%>
+        <% end %>
       </span>
     </p>
     <%= link_to "voltar para programas", programs_path, class: "btn btn-ghost" %>

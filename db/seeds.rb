@@ -3,9 +3,17 @@ require "faker"
 user = User.new(email: "pedro@teste.com.br", password: "123123", name: "Pedro")
 user.save!
 
+user2 = User.new(email: "julia@teste.com.br", password: "123123", name: "Julia")
+user2.save!
+
+
 program = Program.new(user: user, category: "rails", name: "aprenda rails", description: "esse programa é massa")
 program.save!
 program = Program.new(user: user, category: "ruby", name: "aprenda ruby", description: "esse programa também é massa")
+program.save!
+program = Program.new(user: user2, category: "rails2", name: "aprenda rails2", description: "esse programa é massa")
+program.save!
+program = Program.new(user: user2, category: "ruby2", name: "aprenda ruby2", description: "esse programa também é massa")
 program.save!
 
 20.times do
