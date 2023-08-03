@@ -23,3 +23,4 @@ class ProfilesController < ApplicationController
     params.require(:user).permit(:name, :description, :job, :company, :photo)
   end
 end
+

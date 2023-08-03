@@ -1,10 +1,28 @@
+<%# banner %>
 <div>
 <%= render "shared/banner_profile" %>
 
 <%= link_to "Editar Perfil", edit_profile_path(@user), class: "btn btn-secondary mb-3" %>
 </div>
-<div>
-<div class="mt-5">
- <h3>meus programas de mentoria</h3>
- </div> <%= render "shared/card_small" %>
- </div>
+
+<%# meus programas %>
+<div class="profile-programs d-flex flex-column">
+  <div class="profile-programs-title mb-4">
+    <h3 class="m-0">meus programas de mentoria</h3>
+  </div>
+  <div class="profile-programs-cards mb-5">
+    <%= render "shared/card_small" %>
+  </div>
+  <%# minhas inscrições %>
+</div>
+<% if @user == current_user %>
+<div class="profile-subscriptions d-flex flex-column">
+  <div class="profile-subscriptions-title mb-4">
+    <h3>minhas inscrições</h3>
+  </div>
+  <div class="profile-subscriptions-cards mb-5">
+    <%= render "shared/card_small" %>
+  </div>
+  <% end %>
+</div>
+
