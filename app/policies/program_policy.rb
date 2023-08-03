@@ -15,12 +15,11 @@ class ProgramPolicy < ApplicationPolicy
   end
 
   def update?
-    record.user == user
+    owner?
   end
 
   def edit?
-    set_user_scope
-    true
+    owner?
   end
 
   def destroy?
@@ -31,10 +30,5 @@ class ProgramPolicy < ApplicationPolicy
 
   def owner?
     record.user == user
-  end
-
-  def set_user_scope
-    @user = user
-    @record = record
   end
 end
