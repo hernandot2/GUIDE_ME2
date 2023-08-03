@@ -1,9 +1,9 @@
 
 .category-menu {
-  margin-top: 20px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  flex-flow: row wrap;
+  flex-wrap: wrap; /* Isso permitirá que os itens se envolvam quando não houver espaço suficiente */
+  margin-top: 20px;
+  gap: 10px; /* Espaçamento entre os botões */
+  justify-content:flex-start;
+
 }
