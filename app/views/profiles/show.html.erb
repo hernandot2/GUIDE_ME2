@@ -1,9 +1,10 @@
 <div>
-  <%= render "shared/banner_profile" %>
+<%= render "shared/banner_profile" %>
+
+<%= link_to "Editar Perfil", edit_profile_path(@user), class: "btn btn-secondary mb-3" %>
 </div>
 <div>
-  <div class="mt-5">
-    <h3>meus programas de mentoria</h3>
-  </div>
-  <%= render "shared/card_small" %>
-</div>
+<div class="mt-5">
+ <h3>meus programas de mentoria</h3>
+ </div> <%= render "shared/card_small" %>
+ </div>
