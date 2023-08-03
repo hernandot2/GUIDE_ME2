@@ -40,9 +40,10 @@
   text-decoration: none;
 }
 
-.card-large-header:hover h5 {
+.card-large-header h5:hover {
   font-size: 18px;
-  text-decoration: underline;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .card-large-header:first-child {
@@ -90,18 +91,18 @@
 }
 .image-container:hover img{
   transition: transform 0.2s ease;
-  outline: 2px solid $primary-02;
+  outline: 1px solid $secondary-02;
 }
 
 .card-large:hover .image-container img {
   transition: transform 0.2s ease;
-  transform: scale(1.25);
+  transform: scale(1.20);
 }
 
 .card-large-user-info {
   display: flex;
   flex-direction: column;
-  margin-left: 66px;
+  margin-left: 68px;
 }
 
 .card-large-user-info-link {
@@ -111,8 +112,8 @@
 }
 .card-large-user-info-link:hover {
   color: $secondary-05;
-  font-weight: 600;
-  text-decoration: underline;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .card-large-user-info-job {
