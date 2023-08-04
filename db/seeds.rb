@@ -142,9 +142,6 @@ people.each do |person, info|
   program.save!
 end
 
-
-
-
 user = User.new(email: "pedro@teste.com.br", password: "123123", name: "Pedro", job: "Full-stack developer", description: "essa é uma descrição descrita a fim de descrever descrições")
 
 program = Program.new(user: user, category: "rails", name: "aprenda rails", description: "esse programa é massa")

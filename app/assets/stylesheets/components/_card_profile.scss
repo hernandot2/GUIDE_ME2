@@ -1,7 +1,7 @@
-.card-mentor {
+.card-profile {
   overflow: hidden;
   height: 500px;
-  width: 450px;
+  width: 350px;
   border: solid #253664;
   border-width: medium;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -10,38 +10,24 @@
   grid-template-rows: 70px 1fr 80px;
 }
 
-.card-mentor-text {
+.card-profile-text {
   font-size: 14px;
   font-weight: 350;
   color: $neutral-05;
   display: -webkit-box;
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
-  font-size: 14px;
   font-weight: 350;
-  color: $neutral-05;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 40px;
 }
 
-.card-mentor-name {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.card-mentor-user img {
-  width: 100px;
-  height: 100px;
-  margin-left: 100px;
-  border-radius: 50%;
-  top: 1;
-}
-
-.card-mentor-infos {
-  margin-right: 20px;
-}
-
-.program-text {
-  margin-right: 40px;
+.card-profile-infos {
+  color: $neutral-06;
+  font-weight: 400;
+  text-decoration: none;
+  text-decoration: none;
+  word-break: break-word;
+  margin-top: 40px;
 }

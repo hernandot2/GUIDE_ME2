@@ -8,24 +8,32 @@
   </div>
 </div>
 
-<%# meus programas %>
-<div class="profile-programs d-flex flex-column">
-  <div class="profile-programs-title mb-4">
-    <h3 class="m-0">meus programas de mentoria</h3>
-  </div>
-  <div class="profile-programs-cards mb-5">
-    <%= render "shared/card_small" %>
-  </div>
-  
-  <%# minhas inscrições %>
-</div>
-<% if @user == current_user %>
-  <div class="profile-subscriptions d-flex flex-column">
-    <div class="profile-subscriptions-title mb-4">
-      <h3>minhas inscrições</h3>
+<div class="d-flex justify-content-between">
+  <div class="programas-inscrições">
+    <%# meus programas %>
+    <div class="profile-programs">
+      <div class="profile-programs-title mb-4">
+        <h3 class="m-0">meus programas de mentoria</h3>
+      </div>
+      <div class="profile-programs-cards mb-5">
+       <%= render "shared/card_small" %>
+      </div>
     </div>
-    <div class="profile-subscriptions-cards mb-5">
-      <%= render "shared/card_small" %>
-    </div>
-  <% end %>
+    <%# minhas inscrições %>
+    <% if @user == current_user %>
+      <div class="profile-subscriptions">
+        <div class="profile-subscriptions-title mb-4">
+          <h3>minhas inscrições</h3>
+        </div>
+        <div class="profile-subscriptions-cards mb-5">
+          <%= render "shared/card_small" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%# minhas informações %>
+  <div class="space-card-profile">
+    <%= render "shared/card_profile" %>
+  </div>
 </div>
