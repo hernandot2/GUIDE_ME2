@@ -1,6 +1,10 @@
-<div class="category-menu">
-<%= link_to "Todos", root_path, class: "btn-ghost-filter" %>
+
+
+<div class="container">
+<div class="category-menu d-md-flex d-none">
+  <%= link_to "Todos", programs_path, class: "btn-filter" %>
   <% %w[Ruby JS CSS PMI Produtividade C# Empregos Exterior Python Mindset].each do |category| %>
-    <%= link_to category, root_path(category: category), class: "btn-ghost-filter" %>
+    <%= link_to category, programs_path(category: category), class: "btn-filter" %>
   <% end %>
+</div>
 </div>

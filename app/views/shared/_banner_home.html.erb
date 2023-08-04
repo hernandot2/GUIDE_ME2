@@ -1,18 +1,16 @@
-<div id="banner-home" class="container banner-home py-5">
-  <div class="banner-heading justify-content-between">
-    <div>
+<div id="banner-home" class="py-5">
+  <div class="banner-heading row justify-content-between align-items-center">
+    <div class="col-lg-6">
       <div>
-        <h1>explore novas direções para sua carreira</h1>
+        <h1>explore <span class="banner-secondary-05">novas direções</span> para sua carreira</h1>
         <h5>encontre programas de mentoria e aprenda com os melhores de cada área</h5>
       </div>
-      <div>
+      <div class="button-container pt-3">
         <% if user_signed_in? %>
-          <div class="button-container pt-3">
-            <%= link_to "explorar programas", programs_path, class: "btn btn-ghost" %>
-          </div>
+          <%= link_to "explorar programas", programs_path, class: "btn btn-ghost button-banner" %>
         <% else %>
-          <div class="button-container pt-3">
-            <%= link_to "explorar programas", programs_path, class: "btn btn-ghost button-banner" %>
+          <div class="d-flex flex-column flex-md-row gap-3">
+            <%= link_to "explorar programas", programs_path, class: "btn btn-ghost button-banner mb-1 mb-md-0 mr-md-3" %>
             <%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat button-banner" %>
           </div>
         <% end %>
@@ -26,8 +24,8 @@
 
       </div>
     </div>
-    <div>
-      <%= image_tag "illustration-home.svg", id: "illustration-home", class: "d-none d-lg-block" %>
+    <div class="col-lg-6 text-center order-lg-1">
+      <%= image_tag "illustration-home.svg", id: "illustration-home", class: "d-none d-lg-block float-end text-end" %>
     </div>
   </div>
 </div>

@@ -1,14 +1,9 @@
-<div class="container">
-  <%= form_with(model: program) do |f| %>
-      <%= f.label :name, style: "display: block" %>
-      <%= f.text_field :name %>
-
-      <%= f.label :description, style: "display: block" %>
-      <%= f.text_field :description %>
-
-      <%= f.label :category, style: "display: block" %>
-      <%= f.select :category, %w[Ruby JS CSS PMI Produtividade C# Empregos Exterior Python Mindset] %>
-
-      <div><%= f.submit %></div>
+  <%= form_with(model: program, class: "edit-form") do |f| %>
+    <%= f.label :name, "nome do programa de mentoria" %>
+    <%= f.text_field :name %>
+    <%= f.label :category, "categoria" %>
+    <%= f.select :category, %w[Ruby JS CSS PMI Produtividade C# Empregos Exterior Python Mindset] %>
+    <%= f.label :description, "descrição do programa" %>
+    <%= f.text_area :description %>
+    <%= f.submit "atualizar", class: "btn btn-flat" %>
   <% end %>
-</div>

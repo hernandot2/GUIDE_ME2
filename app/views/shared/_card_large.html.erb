@@ -1,23 +1,27 @@
-<div class="container mt-5">
+<div class="mt-5">
   <div class="row">
     <% @programs.each do |program| %>
-      <div class="program-cards col-md-3 mb-5">
-        <div class="card-large shadow">
+      <div class="program-cards col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-5">
+        <div class="card-large">
           <div class="card-large-header px-3">
-            <h5 class="m-0 p-0"><strong><%= link_to program.name, program_path(program), class: "text-decoration-none"  %></strong></h5>
+            <h5 class="m-0 p-0"><strong><%= link_to program.name, program_path(program), class: "text-decoration-none" %></strong></h5>
           </div>
-          <div class="card-large-body">
-            <p class="card-large-text px-3 py-2"><%= program.description %></p>
+          <div class="card-large-text-container">
+            <p class="card-large-text px-3"><%= program.description %></p>
           </div>
           <div class="card-large-user">
+            <div class="image-container">
               <%= link_to profile_path(User.find(program.user_id)) do %>
-                <%= image_tag "avatar.svg" %>
+                <%= image_tag "avatar.svg", class: "card-large-avatar img-fluid rounded-circle", width: 50 %>
               <% end %>
+            </div>
             <div class="card-large-user-info">
-              <%= link_to User.find(program.user_id).name, profile_path(User.find(program.user_id)), class: "card-large-user-info-link" %>
+              <div><%= link_to User.find(program.user_id).name, profile_path(User.find(program.user_id)), class: "card-large-user-info-link" %></div>
+              <div class="card-large-user-info-job"><%= User.find(program.user_id).job %></div>
             </div>
           </div>
         </div>
       </div>
     <% end %>
   </div>
+</div>

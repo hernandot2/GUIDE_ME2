@@ -1,35 +1,51 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+<div class="edit-user-form mt-5">
+  <h2>editar meus dados</h2>
+  <div class="col-lg flex-column align-items-center">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-inputs">
+        <%= f.input :name,
+                    label: "nome",
+                    required: false %>
+        <%= f.input :email, required: true, autofocus: true, label: "e-mail" %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+        <% end %>
+        <%= f.input :password,
+                    hint: "deixe em branco caso não queira alterar",
+                    required: false,
+                    label: "nova senha",
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+                    label: "confirme sua senha",
+                    required: false,
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :current_password,
+                    label: "senha atual",
+                    hint: "é necessário sua senha atual para confirmar as mudanças",
+                    required: true,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.text_area :description,
+                    hint: "é a bio que aparece em seu perfil",
+                    required: false,
+                    value: current_user.description,
+                    class: "text-area" %>
+      </div>
+      <div class="form-actions button-container mt-3">
+        <%= link_to "voltar", :back, class: "btn btn-ghost" %>
+        <%= f.button :submit, "atualizar", class: "btn-flat"  %>
+      </div>
     <% end %>
-
-    <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <div class="mb-5">
+      <h6 class="cancel-title mt-5 bt-1">cancelar minha conta</h6>
+      <div class="button-container"><%= button_to "cancelar minha conta",
+          registration_path(resource_name),
+          data: { confirm: "Are you sure?",
+          turbo_confirm: "Are you sure?" },
+          method: :delete,
+          class: "btn btn-delete" %>
+    </div>
   </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
-
-<%= link_to "Back", :back %>
+</div>

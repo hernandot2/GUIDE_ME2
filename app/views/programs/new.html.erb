@@ -1,9 +1,15 @@
-<div class="container">
-  <h1>adicionar novo programa</h1>
-  <%= render "form", program: @program, class: "simple-form" %>
-  <br>
-
+  <%= render "shared/banner_mentor" %>
+  
   <div>
-    <%= link_to "Back to program", programs_path %>
+    <button class="btn btn-flat" type="button" data-toggle="collapse" data-target="#collapsibleContent" aria-expanded="false" aria-controls="collapsibleContent">
+      adicionar novo programa
+    </button>
+
+    <div class="collapse mt-3" id="collapsibleContent">
+      <%= render "form", program: @program, class: "simple-form" %>
+      <br>
+      <div>
+        <%= link_to "Back to program", programs_path %>
+      </div>
+    </div>
   </div>
-</div>
