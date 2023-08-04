@@ -17,8 +17,27 @@
   font-weight: 700;
 }
 
+.nav-link-secondary {
+  color: $secondary-04;
+  margin-right: 16px ;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: $primary-07;
+  font-weight: 800;
+}
+.nav-link-secondary:hover {
+  color: $secondary-04;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .nav-text {
-  margin: auto 6px;
+  margin: auto 0;
 }
 
 .navbar {

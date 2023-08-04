@@ -2,5 +2,5 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
-
+import ".packs/cloudinary_widget"
 console.log("Estou aqui")

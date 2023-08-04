@@ -5,26 +5,25 @@ class MentorshipsController < ApplicationController
   end
 
   def create
-    program = Program.find(params[:program_id])
-    mentorship = Mentorship.new(user: current_user, program: program)
+    @program = Program.find(params[:program_id])
+    @mentorship = Mentorship.new(user: current_user, program: @program)
 
-    if mentorship.save
-      flash[:success] = "você se inscreveu neste programa!"
+    authorize @mentorship
+    
+    if @mentorship.save
+      redirect_to program_path(@program), notice: "você se inscreveu neste programa!"
     else
-      flash[:error] = "algo deu errado"
+      render program_path(@program), notice: "algo de errado não deu certo!"
     end
 
-    redirect_to program_path(program)
   end
 
   def destroy
-    mentorship = Mentorship.find(params[:id])
-    if mentorship.user == current_user
-      mentorship.destroy
-      flash[:success] = "você se desinscreveu do programa"
-    else
-      flash[:error] = "você não tem autorização para se desinscrever"
-    end
-    redirect_to profiles_path
+    @mentorship = Mentorship.find(params[:format])
+    
+    authorize @mentorship
+
+    @mentorship.destroy
+    redirect_to profile_path(current_user), notice: "você se desinscreveu do programa"
   end
 end

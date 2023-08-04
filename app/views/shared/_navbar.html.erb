@@ -19,8 +19,8 @@
         </li>
       <% elsif devise_controller? %>
       <% else %>
-        <div class="nav-item d-flex">
-          <%= link_to "quero mentorar", new_program_path, class: "nav-link " %>
+        <div class="d-flex">
+          <%= link_to "quero mentorar", new_user_registration_path, class: "nav-link-secondary" %>
         </div>
         <div class="nav-item d-flex">
           <p class="nav-text">já tem conta?</p>
