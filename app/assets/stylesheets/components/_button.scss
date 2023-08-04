@@ -30,15 +30,15 @@
 // btn-ghost
 
 
-.btn-filter {
-  color: $primary-05;
-  border: 2px solid $primary-05;
-  padding: 2px 12px 3px;
-  border-radius: 5px;
-  transition: opacity 0.3s ease;
-  text-decoration: none;
-  margin: 2px 6px;
-}
+  .btn-filter {
+    color: $primary-05;
+    border: 2px solid $primary-05;
+    padding: 2px 7px 2px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+  }
+
 
 .btn-ghost {
   color: $primary-05;
