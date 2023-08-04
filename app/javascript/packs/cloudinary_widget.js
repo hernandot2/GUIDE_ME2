@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   var widget = cloudinary.createUploadWidget({
-    cloudName: "YOUR_CLOUD_NAME",
-    uploadPreset: "YOUR_UPLOAD_PRESET",
+    cloudName: "ddv8elvhi",
+    uploadPreset: "ml_default",
     cropping: true,
     croppingAspectRatio: 1,
     croppingDefaultSelectionRatio: 0,
@@ -16,3 +16,5 @@ document.addEventListener("DOMContentLoaded", function() {
     widget.open();
   });
 });
+
+

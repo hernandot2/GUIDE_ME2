@@ -17,7 +17,7 @@
             <%= link_to "sair", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
           </div>
         </li>
-      <% elsif devise_controller? %>
+        <% elsif devise_controller? %>
       <% else %>
         <div class="d-flex">
           <%= link_to "quero mentorar", new_user_registration_path, class: "nav-link-secondary" %>
