@@ -1,20 +1,14 @@
 <div>
   <%= render "shared/banner_program" %>
-
   <div class="d-flex justify-content-end">
     <% if @program.user == current_user %>
       <%= link_to "editar programa", edit_program_path, class: "btn btn-ghost mb-3" %>
     <% end %>
   </div>
-
 </div>
-
 <div class="program-page">
-
   <h2>sobre o programa</h2>
-
   <div class="program-description">
     <%= @program.description %>
   </div>
-
 </div>

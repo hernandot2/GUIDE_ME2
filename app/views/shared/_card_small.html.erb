@@ -8,18 +8,18 @@
         <div class="card-small-body d-flex   align-items-center">
           <p class="card-small-text px-3 flex-grow-1"><%= program.description %></p>
           <div class="icons d-flex flex-column px-3">
-          <% if program.user == current_user %>
-            <div id="edit-icon">
-              <%= link_to edit_program_path(program) do %>
-                <i class="fa-solid fa-pen-to-square"></i>
-              <% end %>
-            </div>
-            <div class="py-1"></div>
-            <div id="delete-icon">
-              <%= link_to program_path(program), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que deseja apagar esse programa?" } do %>
-                <i class="fa-solid fa-trash"></i>
-              <% end %>
-            </div>
+            <% if program.user == current_user %>
+              <div id="edit-icon">
+                <%= link_to edit_program_path(program) do %>
+                  <i class="fa-solid fa-pen-to-square"></i>
+                <% end %>
+              </div>
+              <div class="py-1"></div>
+              <div id="delete-icon">
+                <%= link_to program_path(program), data: { turbo_method: :delete, turbo_confirm: "tem certeza que deseja apagar esse programa?" } do %>
+                  <i class="fa-solid fa-trash"></i>
+                <% end %>
+              </div>
             <% end %>
           </div>
         </div>
@@ -27,5 +27,3 @@
     <% end %>
   </div>
 </div>
-
-

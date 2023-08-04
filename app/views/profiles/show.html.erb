@@ -7,7 +7,6 @@
     <% end %>
   </div>
 </div>
-
 <%# meus programas %>
 <div class="profile-programs d-flex flex-column">
   <div class="profile-programs-title mb-4">
@@ -16,7 +15,6 @@
   <div class="profile-programs-cards mb-5">
     <%= render "shared/card_small" %>
   </div>
-  
   <%# minhas inscrições %>
 </div>
 <% if @user == current_user %>
@@ -25,7 +23,7 @@
       <h3>minhas inscrições</h3>
     </div>
     <div class="profile-subscriptions-cards mb-5">
-      <%= render "shared/card_small" %>
+      <%= render "shared/card_mentorship" %>
     </div>
   <% end %>
 </div>
