@@ -1,3 +1,5 @@
+require "open-uri"
+
 # usuários teste
 user = User.new(email: "teste@teste.com.br", password: "123123", name: "Pedro", job: "Full-stack developer")
 user.save!
@@ -12,6 +14,7 @@ people = {
     program_category: "Desenvolvimento",
     company: "Pixel Solutions",
     email: "ana.luiza@example.com"
+    photo_url: ""
   },
   person2: {
     name: "Lucas Oliveira",
@@ -21,7 +24,8 @@ people = {
     program_name: "Desenvolvimento Mobile",
     program_category: "Desenvolvimento",
     company: "DataMinds",
-    email: "lucas.oliveira@example.com"
+    email: "lucas.oliveira@example.com",
+    photo_url: ""
   },
   person3: {
     name: "Marina Silva",
@@ -32,6 +36,7 @@ people = {
     program_category: "Design",
     company: "InnovationLabs",
     email: "marina.silva@example.com"
+    photo_url: ""
   },
   person4: {
     name: "Rafael Santos",
@@ -42,6 +47,7 @@ people = {
     program_category: "Desenvolvimento",
     company: "ArtCraft Studios",
     email: "rafael.santos@example.com"
+    photo_url: ""
   },
   person5: {
     name: "Pedro Mendes",
@@ -52,6 +58,7 @@ people = {
     program_category: "Desenvolvimento",
     company: "MarketPro Solutions",
     email: "pedro.mendes@example.com"
+    photo_url: ""
   },
   person6: {
     name: "Camila Costa",
@@ -62,6 +69,7 @@ people = {
     program_category: "Segurança",
     company: "AccurateSecurity",
     email: "camila.costa@example.com"
+    photo_url: ""
   },
   person7: {
     name: "Felipe Souza",
@@ -72,6 +80,7 @@ people = {
     program_category: "Ciência de Dados",
     company: "TalentHub Solutions",
     email: "felipe.souza@example.com"
+    photo_url: ""
   },
   person8: {
     name: "Vanessa Ferreira",
@@ -82,6 +91,7 @@ people = {
     program_category: "Desenvolvimento",
     company: "TechSellers",
     email: "vanessa.ferreira@example.com"
+    photo_url: ""
   },
   person9: {
     name: "Rafael Castro",
@@ -92,6 +102,7 @@ people = {
     program_category: "Design",
     company: "UX Innovations",
     email: "rafael.castro@example.com"
+    photo_url: ""
   },
   person10: {
     name: "Bianca Oliveira",
@@ -102,6 +113,7 @@ people = {
     program_category: "Segurança",
     company: "WordCrafters",
     email: "bianca.oliveira@example.com"
+    photo_url: ""
   },
   person11: {
     name: "Gustavo Rodrigues",
@@ -112,6 +124,7 @@ people = {
     program_category: "Ciência de Dados",
     company: "DataOptimize",
     email: "gustavo.rodrigues@example.com"
+    photo_url: ""
   },
   person12: {
     name: "Isabela Almeida",
@@ -122,6 +135,7 @@ people = {
     program_category: "Design",
     company: "ProjectLink Solutions",
     email: "isabela.almeida@example.com"
+    photo_url: ""
   },
   person13: {
     name: "Gabriel Santos",
@@ -132,12 +146,17 @@ people = {
     program_category: "Ruby on Rails Development",
     company: "CodeMasters Academy",
     email: "gabriel.santos@example.com"
+    photo_url: ""
   }
 }
 
 people.each do |person, info|
+  file = URI.open(info[:photo_url])
+  
   user = User.new(name: info[:name], job: info[:job],company: info[:company], description: info[:user_description], email: info[:email], password: "123123")
+  user.photo.attach(io: file, filename: "#{info[:name]}.svg", content_type: "image/svg")
   user.save!
+
   program = Program.new(user: user,name: info[:program_name], description: info[:program_description],category:  info[:program_category])
   program.save!
 end

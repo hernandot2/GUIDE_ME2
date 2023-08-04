@@ -12,7 +12,11 @@
           <div class="card-large-user">
             <div class="image-container">
               <%= link_to profile_path(User.find(program.user_id)) do %>
-                <%= image_tag "avatar.svg", class: "card-large-avatar img-fluid rounded-circle", width: 50 %>
+                <% if program.user.photo.attached? %>
+                  <%= image_tag program.user.photo, class: "card-large-avatar img-fluid rounded-circle"  %>
+                <% else %>
+                <%= image_tag "avatar.svg", class: "card-large-avatar-placeholder d-block" %>
+                <% end %>
               <% end %>
             </div>
             <div class="card-large-user-info">
