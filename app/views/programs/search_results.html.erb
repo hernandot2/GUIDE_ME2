@@ -6,7 +6,7 @@
 
    <% @programs.each do |program| %>
 
-    <li><%= link_to program.name, program_path(program) %></li>
+<li><%= link_to program.name, program_path(program) %></li>
  <p><%= program.description %></p>
   <% end %>
 
@@ -15,4 +15,3 @@
      </div>
   </div>
 </div>
-

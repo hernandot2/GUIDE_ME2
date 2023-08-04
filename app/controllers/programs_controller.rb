@@ -5,12 +5,14 @@ class ProgramsController < ApplicationController
 
   def search
     if params[:query]
-    @programs = Program.where("name ILIKE ?", "%#{params[:query]}%") # added
+      query = " name ILIKE :query OR description ILIKE :query "
+    @programs = Program.where(query, query:"%#{params[:query]}%") # added
     render :search_results
     else
     @programs = Program.all
   end
 end
+
 
   def show
     @program = Program.find(params[:id])

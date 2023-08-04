@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get 'search_programs', to: 'programs#search', as: 'search_programs'
 
 
-
   resources :programs
   resources :profiles, only: :show
 
