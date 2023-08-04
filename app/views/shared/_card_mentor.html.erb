@@ -1,11 +1,11 @@
 <div class="card-mentor">
 
-  <div class="card-mentor-user d-flex align-items-right">
+  <div class="card-mentor-user d-flex justify-content-between">
     <div class="card-mentor-name">
       <h2> mentor </h2>
       <p> <%= Program.find(params[:id].to_i).user.name %></p>
     </div>
-    <div class="card-mentor-user img d-flex justify-content-end">
+    <div class="card-mentor-user img">
       <%= image_tag "avatar.svg" %>
     </div>
   </div>

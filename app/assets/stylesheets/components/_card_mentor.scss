@@ -33,7 +33,6 @@
 .card-mentor-user img {
   width: 100px;
   height: 100px;
-  margin-left: 100px;
   border-radius: 50%;
   top: 1;
 }
@@ -44,4 +43,21 @@
 
 .program-text {
   margin-right: 40px;
+}
+
+
+@media screen and (max-width: 575px) {
+  .program-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .program-text {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .card-mentor {
+    width: 100%;
+  }
 }
