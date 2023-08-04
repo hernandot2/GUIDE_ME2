@@ -1,0 +1,13 @@
+<div class="card-profile">
+
+  <h2> sobre mim </h2>
+
+  <div class="card-profile-infos">
+    <p><%= Program.find(params[:id].to_i).user.job %></p>
+    <p><%= Program.find(params[:id].to_i).user.company %></p>
+  </div>
+
+  <div class="card-profile-text">
+    <p><%= Program.find(params[:id].to_i).user.description %></p>
+  </div>
+</div>
