@@ -6,10 +6,13 @@
     <% end %>
   </div>
 </div>
-<div class="program-page">
-  <h2>sobre o programa</h2>
-  <%= render "shared/card_mentor" %>
-  <div class="program-description">
+
+<div class="d-flex justify-content-between">
+  <div class="program-text">
+    <h2>sobre o programa</h2>
     <%= @program.description %>
   </div>
+
+  <%= render "shared/card_mentor" %>
+
 </div>
