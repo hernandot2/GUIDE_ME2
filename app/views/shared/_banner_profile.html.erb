@@ -2,8 +2,8 @@
   <div class="container banner-heading justify-content-center">
     <div class="row align-items-center">
       <div class="col-12 col-sm-2 text-center mb-3 mb-sm-0">
-      <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
-        <%= image_tag "avatar.svg", id: "avatar-profile", class: "avatar-large img-fluid" %>
+      <%= cl_image_tag @user.photo.key, class: "avatar-large img-fluid", crop: :fill %>
+
       </div>
       <div class="col-12 col-sm-10 text-sm-left">
         <h1><%= @user.name %></h1>
