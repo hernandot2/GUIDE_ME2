@@ -21,8 +21,11 @@ class ProgramsController < ApplicationController
 end
 
 
-  def show
-  end
+    def show
+      authorize @program
+    end
+
+
 
   def new
     @program = Program.new
