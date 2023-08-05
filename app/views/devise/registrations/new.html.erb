@@ -14,12 +14,20 @@
       <%= f.input :name,
                   label: "nome",
                   required: true,
-                  autofocus: true%>
+                  autofocus: true %>
       <%= f.input :email,
                   label: "e-mail",
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
+      <%= f.input :job,
+                  label: "profissão",
+                  required: false,
+                  autofocus: true %>
+      <%= f.input :company,
+                  label: "empresa",
+                  required: false,
+                  autofocus: true %>
       <%= f.input :password,
                   label: "digite uma senha",
                   required: true,

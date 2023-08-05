@@ -10,7 +10,7 @@
                     required: false %>
         <%= f.input :email, required: true, autofocus: true, label: "e-mail" %>
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+          <p>esperando confirmação para: <%= resource.unconfirmed_email %></p>
         <% end %>
         <%= f.input :password,
                     hint: "deixe em branco caso não queira alterar",
@@ -21,16 +21,27 @@
                     label: "confirme sua senha",
                     required: false,
                     input_html: { autocomplete: "new-password" } %>
-        <%= f.input :current_password,
-                    label: "senha atual",
-                    hint: "é necessário sua senha atual para confirmar as mudanças",
-                    required: true,
-                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :job,
+                    label: "profissão",
+                    required: false,
+                    value: current_user.job %>
+        <%= f.input :company,
+                    label: "empresa",
+                    required: false,
+                    value: current_user.company %>
         <%= f.text_area :description,
                     hint: "é a bio que aparece em seu perfil",
+                    label: "sua bio",
                     required: false,
                     value: current_user.description,
                     class: "text-area" %>
+        <div class="mt-5">
+          <%= f.input :current_password,
+                      label: "senha atual",
+                      hint: "é necessário sua senha atual para confirmar as mudanças",
+                      required: true,
+                      input_html: { autocomplete: "current-password" } %>
+        </div>
       </div>
       <div class="form-actions button-container mt-3">
         <%= link_to "voltar", :back, class: "btn btn-ghost" %>
@@ -38,7 +49,7 @@
       </div>
     <% end %>
   </div>
-  <div class="button-container mt-3"><%= button_to "cancelar minha conta",
+  <div class="button-container mt-3 mb-5"><%= button_to "cancelar minha conta",
           registration_path(resource_name),
           data: { confirm: "Are you sure?",
           turbo_confirm: "Are you sure?" },

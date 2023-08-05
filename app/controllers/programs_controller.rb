@@ -57,7 +57,7 @@ end
     authorize @program
     
     @program.destroy
-    redirect_to programs_path, notice: "programa excluído com sucesso"
+    redirect_to profile_path, notice: "programa excluído com sucesso"
   end
 
   private

@@ -12,9 +12,19 @@
   <div class="profile-programs-title mb-4">
     <h3 class="m-0">meus programas de mentoria</h3>
   </div>
-  <div class="profile-programs-cards mb-5">
-    <%= render "shared/card_small" %>
-  </div>
+  <% if @user == current_user %>
+    <% if current_user.programs.empty? %>
+      <p class="mb-5">você ainda não criou nenhum programa de mentoria</p>
+    <% else %>
+      <div class="profile-programs-cards mb-5">
+        <%= render "shared/card_small" %>
+      </div>
+    <% end %>
+    <% else %>
+      <div class="profile-programs-cards mb-5">
+        <%= render "shared/card_small" %>
+      </div>
+  <% end %>
   <%# minhas inscrições %>
 </div>
 <% if @user == current_user %>
@@ -22,8 +32,12 @@
     <div class="profile-subscriptions-title mb-4">
       <h3>minhas inscrições</h3>
     </div>
-    <div class="profile-subscriptions-cards mb-5">
-      <%= render "shared/card_mentorship" %>
-    </div>
+    <% if current_user.mentorships.empty? %>
+      <p>você ainda não se inscreveu em nenhum programa de mentoria</p>
+    <% else %>
+      <div class="profile-subscriptions-cards mb-5">
+        <%= render "shared/card_mentorship" %>
+      </div>
+    <% end %>
   <% end %>
 </div>
