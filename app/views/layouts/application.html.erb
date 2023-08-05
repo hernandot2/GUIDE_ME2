@@ -23,7 +23,7 @@
     <div class="container">
     
       <% flash.each do |name, msg| %>
-        <div class="alert alert-<%= name == :notice ? 'success' : 'danger' %>">
+        <div class="alert alert-<%= name == :notice ? 'danger' : 'success'%>">
           <%= msg %>
         </div>
       <% end %>

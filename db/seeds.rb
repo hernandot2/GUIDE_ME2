@@ -15,7 +15,7 @@ people = {
   person1: {
     name: "Ana Luiza Almeida",
     job: "Especialista Front-End",
-    user_description: "Especialista front-end apaixonada por criar experiências digitais excepcionais. Líder de projetos desafiadores na Pixel Solutions Inc.",
+    user_description: "Especialista front-end apaixonada por criar experiências digitais excepcionais e inovadoras. Com habilidades especializadas em desenvolvimento web e uma paixão pela criação de interfaces envolventes e responsivas, estou constantemente em busca de maneiras de elevar a qualidade e a usabilidade dos produtos digitais. Minha jornada profissional na área de tecnologia tem sido marcada pela liderança de projetos desafiadores e pela busca incansável da excelência na Pixel Solutions.",
     program_description: "Aprimore suas habilidades em HTML, CSS e JavaScript com orientação de profissionais experientes. Crie sites e aplicativos de alto desempenho que se destacam no mercado.",
     program_about: "Nossa abordagem prática e imersiva permitirá que você desenvolva suas competências, garantindo que esteja preparado(a) para enfrentar desafios no mundo digital contemporâneo com confiança.
 
@@ -69,8 +69,9 @@ people = {
   person5: {
     name: "Pedro Mendes",
     job: "Especialista Full-Stack",
-    user_description: "Especialista Fullstack entusiasmado em criar soluções inovadoras na MarketPro Solutions.",
-    program_description: "Torne-se um desenvolvedor Full Stack completo, dominando front-end e back-end.  Conduza projetos de ponta a ponta.",
+    user_description: "Olá! Sou o Pedro Mendes, um entusiasmado Especialista Full Stack dedicado a criar soluções inovadoras na MarketPro Solutions. Minha paixão por desenvolver projetos abrangentes e de alta qualidade me impulsiona a buscar constantemente o aprimoramento das minhas habilidades e conhecimentos. Como Especialista Full Stack, tenho a capacidade de abordar os desafios de desenvolvimento tanto no front-end quanto no back-end com eficiência e criatividade. Minha sólida experiência em tecnologias de ponta me permite criar interfaces intuitivas e cativantes, proporcionando experiências excepcionais aos usuários.",
+    program_description: "Torne-se um desenvolvedor Full Stack completo, dominando front-end e back-end. Conduza projetos de ponta a ponta, abraçando desafios complexos com confiança e eficiência.",
+    program_about: "Essa oportunidade única proporcionará um ambiente enriquecedor para aprimorar suas habilidades, permitindo que você se destaque no mercado de desenvolvimento web. Nesse programa de mentoria, você terá acesso a um currículo abrangente e atualizado, focado nas tecnologias mais recentes e nas melhores práticas do setor. Aprenda com profissionais experientes, que guiarão seu aprendizado e oferecerão insights valiosos sobre como criar aplicações web inovadoras e robustas. Ao longo desse processo, você desenvolverá competências fundamentais para a construção de interfaces intuitivas e atraentes no front-end, utilizando linguagens de marcação, folhas de estilo e frameworks modernos. Além disso, se aprofundará no back-end, aprendendo a desenvolver APIs poderosas, gerenciar bancos de dados e implementar lógica de negócio sofisticada. Com dedicação e empenho, você estará preparado para enfrentar os desafios do desenvolvimento full stack, compreendendo o fluxo de trabalho completo, desde o conceito inicial até a implantação final. Através de projetos práticos e desafiadores, você ganhará a confiança necessária para enfrentar o mercado de trabalho com segurança e autonomia.",
     program_name: "Desenvolvimento Full-Stack",
     program_category: "Desenvolvimento",
     company: "MarketPro Solutions",

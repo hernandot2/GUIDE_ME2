@@ -13,9 +13,17 @@
   padding-left: 6px;
 }
 
+
 @media screen and (max-width: 575px) {
   .edit-user-form{
     justify-content: left;
     width: 100%;
   } 
 }
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
