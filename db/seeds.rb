@@ -1,7 +1,7 @@
 require "open-uri"
 
 # usuários teste
-user = User.new(email: "teste@teste.com.br", password: "123123", name: "nome_teste", job: "job_teste", :company "company_teste")
+user = User.new(email: "teste@teste.com.br", password: "123123", name: "nome_teste", job: "job_teste", company: "company_teste")
 user.save!
 
 # user = User.new(email: "pedro@teste.com.br", password: "123123", name: "Pedro", job: "Full-stack developer", description: "essa é uma descrição descrita a fim de descrever descrições")
