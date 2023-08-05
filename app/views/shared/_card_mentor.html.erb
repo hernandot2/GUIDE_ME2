@@ -1,0 +1,22 @@
+<div class="card-mentor">
+
+  <div class="card-mentor-user d-flex justify-content-between">
+    <div class="card-mentor-name">
+      <h2> mentor </h2>
+      <p> <%= Program.find(params[:id].to_i).user.name %></p>
+    </div>
+    <div class="card-mentor-user img">
+      <%= image_tag "avatar.svg" %>
+    </div>
+  </div>
+
+  <div class="card-mentor-infos">
+    <p><%= Program.find(params[:id].to_i).user.job %></p>
+    <p><%= Program.find(params[:id].to_i).user.company %></p>
+  </div>
+
+  <div class="card-mentor-text">
+    <p> <%= Program.find(params[:id].to_i).user.description %>
+    </p>
+  </div>
+</div>

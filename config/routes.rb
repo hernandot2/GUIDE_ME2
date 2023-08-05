@@ -5,8 +5,11 @@ Rails.application.routes.draw do
 
   get 'profiles/show'
   get 'contact', to: 'pages#contact'
+  get 'search_programs', to: 'programs#search', as: 'search_programs'
+
 
   resources :programs
   resources :profiles, only: [:show, :edit, :update]
+  resources :mentorships, only: [:show]
 
 end

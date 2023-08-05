@@ -27,3 +27,13 @@
   top: 0;
   z-index: 1000;
 }
+
+.dropdown-menu .dropdown-item {
+  display: flex;
+  justify-content: end;
+}
+
+.dropdown-item:hover {
+  background-color: $primary-01;
+  color: $secondary-05;
+}

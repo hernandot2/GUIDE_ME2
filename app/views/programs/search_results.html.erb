@@ -1,0 +1,17 @@
+<h1>Resultados da busca</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+<ul>
+
+   <% @programs.each do |program| %>
+
+<li><%= link_to program.name, program_path(program) %></li>
+ <p><%= program.description %></p>
+  <% end %>
+
+</ul>
+
+     </div>
+  </div>
+</div>

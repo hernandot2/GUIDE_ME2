@@ -1,0 +1,63 @@
+.card-mentor {
+  overflow: hidden;
+  height: 500px;
+  width: 450px;
+  border: solid #253664;
+  border-width: medium;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 15px;
+  grid-template-rows: 70px 1fr 80px;
+}
+
+.card-mentor-text {
+  font-size: 14px;
+  font-weight: 350;
+  color: $neutral-05;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+  font-weight: 350;
+  color: $neutral-05;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 40px;
+}
+
+.card-mentor-name {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.card-mentor-user img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 1;
+}
+
+.card-mentor-infos {
+  margin-right: 20px;
+}
+
+.program-text {
+  margin-right: 40px;
+}
+
+
+@media screen and (max-width: 575px) {
+  .program-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .program-text {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .card-mentor {
+    width: 100%;
+  }
+}
