@@ -13,6 +13,7 @@
             <div class="image-container">
               <%= link_to profile_path(User.find(program.user_id)) do %>
                 <%= image_tag "avatar.svg", class: "card-large-avatar img-fluid rounded-circle", width: 50 %>
+
               <% end %>
             </div>
             <div class="card-large-user-info">
