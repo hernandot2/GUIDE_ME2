@@ -5,7 +5,7 @@
         <% if @user.photo.attached? %>
           <%= image_tag @user.photo, id: "avatar-profile", class: "avatar-large img-fluid" %>
         <% else %>
-          <%= image_tag "avatar", id: "avatar-profile", class: "avatar-large img-fluid" %>
+          <%= image_tag "avatar.svg", id: "avatar-profile", class: "avatar-large img-fluid" %>
         <% end %>
       </div>
       <div class="col-12 col-sm-10 text-sm-left">
