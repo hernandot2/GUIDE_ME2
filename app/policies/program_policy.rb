@@ -14,6 +14,10 @@ class ProgramPolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    true
+  end
+
   def update?
     owner?
   end
