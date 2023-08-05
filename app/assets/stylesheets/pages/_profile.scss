@@ -1,6 +1,36 @@
 .profile-programs-title {
   color: $secondary-06;
 }
+
 .profile-subscriptions-title {
   color: $secondary-06;
+}
+
+.program-description {
+  width: 75%;
+
+  font-size: 16px;
+  font-weight: 350;
+  color: $neutral-06;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 16px;
+}
+
+.profile-company {
+  color: $neutral-05;
+}
+.program-about {
+  color: $secondary-06;
+}
+
+@media screen and (max-width: 575px) {
+  .program-description {
+    width: 100%;
+  }
 }

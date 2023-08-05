@@ -6,13 +6,25 @@
     <% end %>
   </div>
 </div>
-
 <div class="program-page d-flex justify-content-between">
   <div class="program-text">
-    <h2>sobre o programa</h2>
-    <%= @program.description %>
+    <div class="program-about">
+      <h2>sobre o programa</h2>
+    </div>
+    <div class="program-description justify-content-start mb-5">
+      <p class="m-0"><%= @program.description %></p>
+    </div>
+    <div class="button-container">
+      <% if !current_user.mentorships.exists?(program_id: @program.id)  %>
+        <% if @program.user != current_user %>
+          <%= form_with(url: mentorships_path(program_id: @program.id), method: :post) do |form| %>
+            <%= form.submit "inscreva-se", class: "btn btn-flat button-banner " %>
+          <% end %>
+        <% end %>
+        <% else %>
+        <p>voce ja esta inscrito</p>
+      <% end %>
+    </div>
   </div>
-
   <%= render "shared/card_mentor" %>
-
 </div>
