@@ -1,8 +1,15 @@
 require "open-uri"
 
 # usuários teste
-user = User.new(email: "teste@teste.com.br", password: "123123", name: "Pedro", job: "Full-stack developer")
+user = User.new(email: "teste@teste.com.br", password: "123123", name: "nome_teste", job: "job_teste", :company "company_teste")
 user.save!
+
+# user = User.new(email: "pedro@teste.com.br", password: "123123", name: "Pedro", job: "Full-stack developer", description: "essa é uma descrição descrita a fim de descrever descrições")
+
+# program = Program.new(user: user, category: "rails", name: "aprenda rails", description: "esse programa é massa")
+# program.save!
+# program = Program.new(user: user, category: "ruby", name: "aprenda ruby", description: "esse programa também é massa")
+# program.save!
 
 people = {
   person1: {
@@ -10,6 +17,16 @@ people = {
     job: "Especialista Front-End",
     user_description: "Especialista front-end apaixonada por criar experiências digitais excepcionais. Líder de projetos desafiadores na Pixel Solutions Inc.",
     program_description: "Aprimore suas habilidades em HTML, CSS e JavaScript com orientação de profissionais experientes. Crie sites e aplicativos de alto desempenho que se destacam no mercado.",
+    program_about: "Nossa abordagem prática e imersiva permitirá que você desenvolva suas competências, garantindo que esteja preparado(a) para enfrentar desafios no mundo digital contemporâneo com confiança.
+
+    Por meio de sessões de mentoria individuais e em grupo, você receberá orientação especializada para aprimorar suas habilidades técnicas e compreender conceitos avançados em desenvolvimento web. Nossos mentores experientes estarão à disposição para responder a suas dúvidas, fornecer feedback detalhado sobre seus projetos e compartilhar suas valiosas experiências profissionais.
+    
+    Além disso, durante o programa de mentoria, você terá a oportunidade de trabalhar em projetos práticos e desafiadores, que ajudarão a consolidar seus conhecimentos e desenvolver sua capacidade de resolver problemas de forma criativa. Essa abordagem prática permitirá que você crie sites e aplicativos de alto desempenho, que se destacam no mercado pela sua qualidade e inovação.
+    
+    Nosso objetivo é capacitar você a se tornar um(a) desenvolvedor(a) web altamente qualificado(a) e confiante em suas habilidades. Com o suporte da nossa equipe de mentores, você terá o suporte necessário para enfrentar os desafios dinâmicos do mundo da tecnologia, além de receber insights sobre as melhores práticas da indústria.
+    
+    Não perca a oportunidade de participar de nosso programa de mentoria e dar um impulso significativo em sua carreira como desenvolvedor(a) web. Junte-se a nós nessa jornada de aprendizado e crescimento, onde estaremos comprometidos com o seu sucesso e desenvolvimento profissional.
+    ",
     program_name: "Desenvolvimento Web",
     program_category: "Desenvolvimento",
     company: "Pixel Solutions",
@@ -146,13 +163,7 @@ people.each do |person, info|
   user.photo.attach(io: file, filename: "#{info[:name]}.png", content_type: "image/png")
   user.save!
 
-  program = Program.new(user: user,name: info[:program_name], description: info[:program_description],category:  info[:program_category])
+  program = Program.new(user: user,name: info[:program_name], description: info[:program_description], category: info[:program_category], about: info[:program_about])
   program.save!
 end
 
-user = User.new(email: "pedro@teste.com.br", password: "123123", name: "Pedro", job: "Full-stack developer", description: "essa é uma descrição descrita a fim de descrever descrições")
-
-program = Program.new(user: user, category: "rails", name: "aprenda rails", description: "esse programa é massa")
-program.save!
-program = Program.new(user: user, category: "ruby", name: "aprenda ruby", description: "esse programa também é massa")
-program.save!

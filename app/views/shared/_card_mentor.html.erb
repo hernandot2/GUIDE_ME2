@@ -1,7 +1,7 @@
 <div class="card-mentor">
   <div class="card-mentor-user d-flex justify-content-between">
     <div class="card-mentor-name">
-      <h3 class="card-mentor-title"> <%= link_to Program.find(params[:id].to_i).user.name, profile_path(Program.find(params[:id].to_i).user.name), class: "card-mentor-title" %> </h3>
+      <h3 class="card-mentor-title"> <%= link_to Program.find(params[:id].to_i).user.name, profile_path(Program.find(params[:id].to_i).user), class: "card-mentor-title" %> </h3>
       <div class="card-mentor-infos">
         <h5 class="card-mentor-job"><%= Program.find(params[:id].to_i).user.job %></h6>
         <h6 class="card-mentor-company"><%= Program.find(params[:id].to_i).user.company %></h6>

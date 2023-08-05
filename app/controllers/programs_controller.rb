@@ -60,7 +60,7 @@ end
     authorize @program
     
     @program.destroy
-    redirect_to programs_path, notice: "programa excluído com sucesso"
+    redirect_to profile_path, notice: "programa excluído com sucesso"
   end
 
   private
@@ -70,6 +70,6 @@ end
   end
 
   def program_params
-    params.require(:program).permit(:name, :description, :category)
+    params.require(:program).permit(:name, :description, :category, :about)
   end
 end

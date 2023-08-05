@@ -11,18 +11,22 @@
     <div class="program-about">
       <h2>sobre o programa</h2>
     </div>
-    <div class="program-description justify-content-start mb-5">
-      <p class="m-0"><%= @program.description %></p>
+    <div class="program-description d-flex flex-column justify-content-start mb-5">
+      <p class="m-0 mb-2"><%= @program.description %></p>
+      <p class="m-0"><%= @program.about %></p>
     </div>
     <div class="button-container">
-      <% if !current_user.mentorships.exists?(program_id: @program.id)  %>
-        <% if @program.user != current_user %>
-          <%= form_with(url: mentorships_path(program_id: @program.id), method: :post) do |form| %>
-            <%= form.submit "inscreva-se", class: "btn btn-flat button-banner " %>
+      <% if user_signed_in? %>
+        <% if !current_user.mentorships.exists?(program_id: @program.id)  %>
+          <% if @program.user != current_user %>
+            <%= form_with(url: mentorships_path(program_id: @program.id), method: :post) do |form| %>
+              <%= form.submit "inscreva-se", class: "btn btn-flat button-banner " %>
+            <% end %>
           <% end %>
-        <% end %>
         <% else %>
-        <p>voce ja esta inscrito</p>
+          <p>voce ja esta inscrito</p>
+        <% end %>
+      <% else %>
       <% end %>
     </div>
   </div>
