@@ -70,6 +70,6 @@ end
   end
 
   def program_params
-    params.require(:program).permit(:name, :description, :category)
+    params.require(:program).permit(:name, :description, :category, :about)
   end
 end
