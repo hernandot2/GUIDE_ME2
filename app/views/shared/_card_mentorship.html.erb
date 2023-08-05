@@ -1,0 +1,24 @@
+<div class="">
+  <div class="profile-cards">
+    <% @user_mentorships.each do |mentorship| %>
+      <div class="card-small d-flex mb-3">
+        <div class="card-small-header px-3">
+          <h5 class="m-0 p-0"><strong><%= link_to Program.find(mentorship.program_id).name, program_path(mentorship), class: "card-small-link"  %></strong></h5>
+        </div>
+        <div class="card-small-body d-flex   align-items-center">
+          <p class="card-small-text px-3 flex-grow-1"><%= Program.find(mentorship.program_id).description %></p>
+          <div class="icons d-flex flex-column px-3">
+            <% if mentorship.user == current_user %>
+              <div class="py-1"></div>
+              <div id="delete-icon">
+                <%= link_to destroy_mentorship_path(mentorship), data: { turbo_method: :delete, turbo_confirm: "tem certeza que gostaria de se desinscrever?" } do %>
+                  <i class="fa-solid fa-trash"></i>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

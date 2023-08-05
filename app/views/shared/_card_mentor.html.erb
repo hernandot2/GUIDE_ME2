@@ -1,22 +1,21 @@
 <div class="card-mentor">
-
   <div class="card-mentor-user d-flex justify-content-between">
     <div class="card-mentor-name">
-      <h2> mentor </h2>
-      <p> <%= Program.find(params[:id].to_i).user.name %></p>
+      <h3 class="card-mentor-title"> <%= link_to Program.find(params[:id].to_i).user.name, profile_path(Program.find(params[:id].to_i).user.name), class: "card-mentor-title" %> </h3>
+      <div class="card-mentor-infos">
+        <h5 class="card-mentor-job"><%= Program.find(params[:id].to_i).user.job %></h6>
+        <h6 class="card-mentor-company"><%= Program.find(params[:id].to_i).user.company %></h6>
+      </div>
     </div>
-    <div class="card-mentor-user img">
-      <%= image_tag "avatar.svg" %>
+    <div class="img rounded-circle">
+      <% if Program.find(params[:id].to_i).user.photo.attached? %>
+        <%= image_tag Program.find(params[:id].to_i).user.photo, class: "card-mentor-avatar"  %>
+      <% else %>
+        <%= image_tag "avatar.svg", class: "card-large-avatar-placeholder d-block" %>
+      <% end %>
     </div>
   </div>
-
-  <div class="card-mentor-infos">
-    <p><%= Program.find(params[:id].to_i).user.job %></p>
-    <p><%= Program.find(params[:id].to_i).user.company %></p>
-  </div>
-
   <div class="card-mentor-text">
-    <p> <%= Program.find(params[:id].to_i).user.description %>
-    </p>
+    <%= Program.find(params[:id].to_i).user.description %>
   </div>
 </div>

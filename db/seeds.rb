@@ -1,3 +1,5 @@
+require "open-uri"
+
 # usuários teste
 user = User.new(email: "teste@teste.com.br", password: "123123", name: "Pedro", job: "Full-stack developer")
 user.save!
@@ -11,7 +13,8 @@ people = {
     program_name: "Desenvolvimento Web",
     program_category: "Desenvolvimento",
     company: "Pixel Solutions",
-    email: "ana.luiza@example.com"
+    email: "ana.luiza@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189066/ana_luiza_sc9pdw.png"
   },
   person2: {
     name: "Lucas Oliveira",
@@ -21,7 +24,8 @@ people = {
     program_name: "Desenvolvimento Mobile",
     program_category: "Desenvolvimento",
     company: "DataMinds",
-    email: "lucas.oliveira@example.com"
+    email: "lucas.oliveira@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189068/lucas_oliveira_kliwm1.png"
   },
   person3: {
     name: "Marina Silva",
@@ -31,7 +35,8 @@ people = {
     program_name: "UX/UI Design Avançado",
     program_category: "Design",
     company: "InnovationLabs",
-    email: "marina.silva@example.com"
+    email: "marina.silva@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189068/marina_silva_mpbhyn.png"
   },
   person4: {
     name: "Rafael Santos",
@@ -41,7 +46,8 @@ people = {
     program_name: "Arquitetura de Software Moderna",
     program_category: "Desenvolvimento",
     company: "ArtCraft Studios",
-    email: "rafael.santos@example.com"
+    email: "rafael.santos@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189068/rafael_santos_h67nac.png"
   },
   person5: {
     name: "Pedro Mendes",
@@ -51,7 +57,8 @@ people = {
     program_name: "Desenvolvimento Full-Stack",
     program_category: "Desenvolvimento",
     company: "MarketPro Solutions",
-    email: "pedro.mendes@example.com"
+    email: "pedro.mendes@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189068/pedro_mendes_ukci3t.png"
   },
   person6: {
     name: "Camila Costa",
@@ -61,7 +68,8 @@ people = {
     program_name: "Segurança Cibernética Avançada",
     program_category: "Segurança",
     company: "AccurateSecurity",
-    email: "camila.costa@example.com"
+    email: "camila.costa@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189066/camila_costa_zpwr4u.png"
   },
   person7: {
     name: "Felipe Souza",
@@ -71,7 +79,8 @@ people = {
     program_name: "Data Science e Análise de Dados",
     program_category: "Ciência de Dados",
     company: "TalentHub Solutions",
-    email: "felipe.souza@example.com"
+    email: "felipe.souza@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189067/felipe_souza_fzo7k4.png"
   },
   person8: {
     name: "Vanessa Ferreira",
@@ -81,7 +90,8 @@ people = {
     program_name: "Dev-Ops e Entrega Contínua",
     program_category: "Desenvolvimento",
     company: "TechSellers",
-    email: "vanessa.ferreira@example.com"
+    email: "vanessa.ferreira@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189068/vanessa_ferreira_v00i0s.png"
   },
   person9: {
     name: "Rafael Castro",
@@ -91,7 +101,8 @@ people = {
     program_name: "Desenvolvimento de Jogos",
     program_category: "Design",
     company: "UX Innovations",
-    email: "rafael.castro@example.com"
+    email: "rafael.castro@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189068/rafael_castro_gsgetv.png"
   },
   person10: {
     name: "Bianca Oliveira",
@@ -101,7 +112,8 @@ people = {
     program_name: "Cibersegurança Ofensiva",
     program_category: "Segurança",
     company: "WordCrafters",
-    email: "bianca.oliveira@example.com"
+    email: "bianca.oliveira@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189067/bianca_oliveira_vpfxki.png"
   },
   person11: {
     name: "Gustavo Rodrigues",
@@ -111,7 +123,8 @@ people = {
     program_name: "Data Engineering para Big Data",
     program_category: "Ciência de Dados",
     company: "DataOptimize",
-    email: "gustavo.rodrigues@example.com"
+    email: "gustavo.rodrigues@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189067/gustavo_rodrigues_bmasaw.png"
   },
   person12: {
     name: "Isabela Almeida",
@@ -121,23 +134,18 @@ people = {
     program_name: "Realidade Virtual e Aumentada",
     program_category: "Design",
     company: "ProjectLink Solutions",
-    email: "isabela.almeida@example.com"
-  },
-  person13: {
-    name: "Gabriel Santos",
-    job: "Ruby on Rails Developer",
-    user_description: "Sou um desenvolvedor apaixonado por Ruby on Rails e tenho o prazer de compartilhar meus conhecimentos com outros entusiastas. Na CodeMasters Academy, como instrutor de Ruby on Rails, ajudo os alunos a dominar o desenvolvimento web com este poderoso framework. Minhas aulas são práticas, enfatizando o aprendizado através da criação de projetos reais. Com foco na escalabilidade e boas práticas de desenvolvimento, meus alunos aprendem a criar aplicativos web completos e sofisticados.",
-    program_description: "Aprenda a desenvolver aplicativos web com Ruby on Rails, desde conceitos básicos até recursos avançados.",
-    program_name: "Desenvolvimento Web com Ruby on Rails",
-    program_category: "Ruby on Rails Development",
-    company: "CodeMasters Academy",
-    email: "gabriel.santos@example.com"
+    email: "isabela.almeida@example.com",
+    photo_url: "https://res.cloudinary.com/ddv8elvhi/image/upload/v1691189067/isabela_almeida_bgau3r.png"
   }
 }
 
 people.each do |person, info|
+  file = URI.open(info[:photo_url])
+  
   user = User.new(name: info[:name], job: info[:job],company: info[:company], description: info[:user_description], email: info[:email], password: "123123")
+  user.photo.attach(io: file, filename: "#{info[:name]}.png", content_type: "image/png")
   user.save!
+
   program = Program.new(user: user,name: info[:program_name], description: info[:program_description],category:  info[:program_category])
   program.save!
 end

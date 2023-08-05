@@ -4,6 +4,7 @@
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= f.error_notification %>
       <div class="form-inputs">
+        <%= f.file_field :photo %>
         <%= f.input :name,
                     label: "nome",
                     required: false %>
@@ -37,15 +38,11 @@
       </div>
     <% end %>
   </div>
-
-    <div class="mb-5">
-      <h6 class="cancel-title mt-5 bt-1">cancelar minha conta</h6>
-      <div class="button-container"><%= button_to "cancelar minha conta",
+  <div class="button-container mt-3"><%= button_to "cancelar minha conta",
           registration_path(resource_name),
           data: { confirm: "Are you sure?",
           turbo_confirm: "Are you sure?" },
           method: :delete,
           class: "btn btn-delete" %>
-    </div>
   </div>
 </div>

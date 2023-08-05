@@ -9,7 +9,11 @@
     <ul class="navbar-nav me-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown ">
-          <%= image_tag "avatar.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if current_user.photo.attached? %>
+            <%= image_tag current_user.photo, class: "avatar-small dropdown-toggle cursor-pointer", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <%= image_tag "avatar", class: "avatar-small dropdown-toggle cursor-pointer", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
+          <% end %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <%= link_to "meu perfil", profile_path(current_user), class: "dropdown-item" %>
             <%= link_to "editar meus dados", edit_user_registration_path, class: "dropdown-item" %>
@@ -19,8 +23,8 @@
         </li>
       <% elsif devise_controller? %>
       <% else %>
-        <div class="nav-item d-flex">
-          <%= link_to "quero mentorar", new_program_path, class: "nav-link " %>
+        <div class="d-flex">
+          <%= link_to "quero mentorar", new_user_registration_path, class: "nav-link-secondary" %>
         </div>
         <div class="nav-item d-flex">
           <p class="nav-text">já tem conta?</p>

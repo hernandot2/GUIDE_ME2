@@ -2,12 +2,16 @@
   overflow: hidden;
   height: 500px;
   width: 450px;
-  border: solid #253664;
-  border-width: medium;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 1px solid $primary-02;
+  // border-width: medium;
+  // box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   padding: 15px;
   grid-template-rows: 70px 1fr 80px;
+}
+
+.card-mentor-user {
+  border-bottom: 1px solid $primary-02;
 }
 
 .card-mentor-text {
@@ -17,24 +21,25 @@
   display: -webkit-box;
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 350;
-  color: $neutral-05;
+  color: $neutral-06;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-top: 40px;
+  margin-top: 20px;
 }
+
 
 .card-mentor-name {
   font-size: 18px;
   margin-bottom: 20px;
 }
 
-.card-mentor-user img {
+.card-mentor-avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  top: 1;
+  outline: 1px solid $neutral-05;
 }
 
 .card-mentor-infos {
@@ -43,6 +48,7 @@
 
 .program-text {
   margin-right: 40px;
+  width: 65%;
 }
 
 
@@ -60,4 +66,23 @@
   .card-mentor {
     width: 100%;
   }
+}
+
+.card-mentor-title {
+  color: $primary-05;
+  text-decoration: none;
+}
+.card-mentor-title:hover {
+  color: $primary-05;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card-mentor-job {
+  color: $neutral-06;
+  font-size: 18px;
+}
+.card-mentor-company {
+  color: $neutral-05;
+  font-size: 16px;
 }

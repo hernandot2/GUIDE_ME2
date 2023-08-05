@@ -2,12 +2,16 @@
   <div class="container banner-heading justify-content-center">
     <div class="row align-items-center">
       <div class="col-12 col-sm-2 text-center mb-3 mb-sm-0 avatar-container">
-        <%= image_tag "teste", id: "avatar-profile", class: "avatar-large img-fluid" %>
-        <%# <%= cl_image_tag @user.photo.key, id: "avatar-profile", class: "avatar-large img-fluid" %>
+        <% if @user.photo.attached? %>
+          <%= image_tag @user.photo, id: "avatar-profile", class: "avatar-large img-fluid" %>
+        <% else %>
+          <%= image_tag "avatar", id: "avatar-profile", class: "avatar-large img-fluid" %>
+        <% end %>
       </div>
       <div class="col-12 col-sm-10 text-sm-left">
         <h1><%= @user.name %></h1>
         <h5><%= @user.job %></h5>
+        <h6 class="profile-company"><%= @user.company %></h6>
       </div>
     </div>
   </div>

@@ -54,6 +54,12 @@
 #delete-icon i{
   color: $red;
 }
+#edit-icon i:hover{
+  color: $primary-08;
+}
+#delete-icon i:hover{
+  color:darken($color: $red, $amount: 15);
+}
 
 // telas menores
 @media screen and (max-width: 575px) {

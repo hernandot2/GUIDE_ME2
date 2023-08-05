@@ -6,9 +6,6 @@
       </div>
       <div class="button-container pt-3">
         <% if user_signed_in? %>
-          <div class="d-flex flex-column flex-md-row gap-3">
-            <%= link_to "inscreva-se", contact_path, class: "btn-flat m-auto text-decoration-none button-banner d-block mb-1 mb-md-0 mr-md-3" %>
-          </div>
         <% else %>
           <div class="both-buttons d-flex flex-column flex-md-row gap-3">
             <%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat m-auto text-decoration-none d-block" %>
