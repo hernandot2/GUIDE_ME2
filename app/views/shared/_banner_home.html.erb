@@ -2,16 +2,16 @@
   <div class="banner-heading row justify-content-between align-items-center">
     <div class="col-lg-6">
       <div>
-        <h1>explore <span class="banner-secondary-05">novas direções</span> para sua carreira</h1>
-        <h5>encontre programas de mentoria e aprenda com os melhores de cada área</h5>
+        <h1>explore <span class="banner-secondary-05">news directions</span> for your career</h1>
+        <h5>find mentoring programs and learn from the best in each field</h5>
       </div>
       <div class="button-container pt-3">
         <% if user_signed_in? %>
-          <%= link_to "explorar programas", programs_path, class: "btn btn-ghost button-banner" %>
+          <%= link_to "explore programs", programs_path, class: "btn btn-ghost button-banner" %>
         <% else %>
           <div class="d-flex flex-column flex-md-row gap-3">
-            <%= link_to "explorar programas", programs_path, class: "btn btn-ghost button-banner mb-1 mb-md-0 mr-md-3" %>
-            <%= link_to "cadastre-se", new_user_registration_path, class: "btn btn-flat button-banner" %>
+            <%= link_to "explore programs", programs_path, class: "btn btn-ghost button-banner mb-1 mb-md-0 mr-md-3" %>
+            <%= link_to "register", new_user_registration_path, class: "btn btn-flat button-banner" %>
           </div>
         <% end %>
       </div>
