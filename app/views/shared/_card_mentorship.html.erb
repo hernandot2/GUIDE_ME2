@@ -11,7 +11,7 @@
             <% if mentorship.user == current_user %>
               <div class="py-1"></div>
               <div id="delete-icon">
-                <%= link_to destroy_mentorship_path(mentorship), data: { turbo_method: :delete, turbo_confirm: "tem certeza que gostaria de se desinscrever?" } do %>
+                <%= link_to destroy_mentorship_path(mentorship), data: { turbo_method: :delete, turbo_confirm: "Are you sure you would like to unsubscribe?" } do %>
                   <i class="fa-solid fa-trash"></i>
                 <% end %>
               </div>

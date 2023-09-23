@@ -37,7 +37,7 @@ end
     @program.user = current_user
     authorize @program
     if @program.save
-      redirect_to @program, notice: "programa criado com sucesso"
+      redirect_to @program, notice: "program created successfully"
     else
       render :new
     end
@@ -50,7 +50,7 @@ end
   def update
     authorize @program
     if @program.update(program_params)
-      redirect_to @program, notice: 'programa atualizado com sucesso'
+      redirect_to @program, notice: 'program updated successfully'
     else
       render :edit
     end
@@ -58,9 +58,9 @@ end
 
   def destroy
     authorize @program
-    
+
     @program.destroy
-    redirect_to profile_path, notice: "programa excluído com sucesso"
+    redirect_to profile_path, notice: "program deleted successfully"
   end
 
   private

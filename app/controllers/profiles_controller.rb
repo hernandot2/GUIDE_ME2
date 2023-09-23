@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to profile_path(@user), notice: 'dados atualizados com sucesso!'
+      redirect_to profile_path(@user), notice: 'data updated successfully!'
     else
       render :edit
     end
@@ -24,4 +24,3 @@ class ProfilesController < ApplicationController
     params.require(:user).permit(:name, :description, :job, :company, :photo)
   end
 end
-

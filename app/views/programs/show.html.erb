@@ -9,7 +9,7 @@
 <div class="program-page d-flex justify-content-between">
   <div class="program-text">
     <div class="program-about">
-      <h2>sobre o programa</h2>
+      <h2>about the program</h2>
     </div>
     <div class="program-description d-flex flex-column justify-content-start mb-5">
       <p class="m-0 mb-2"><%= @program.description %></p>
@@ -20,11 +20,11 @@
         <% if !current_user.mentorships.exists?(program_id: @program.id)  %>
           <% if @program.user != current_user %>
             <%= form_with(url: mentorships_path(program_id: @program.id), method: :post) do |form| %>
-              <%= form.submit "inscreva-se", class: "btn btn-flat button-banner " %>
+              <%= form.submit "subscribe", class: "btn btn-flat button-banner " %>
             <% end %>
           <% end %>
         <% else %>
-        <p class="search-input">você já está inscrito</p>
+        <p class="search-input">you are registered</p>
         <% end %>
       <% else %>
       <% end %>

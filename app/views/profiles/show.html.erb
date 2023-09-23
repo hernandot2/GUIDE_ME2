@@ -10,11 +10,11 @@
 <%# meus programas %>
 <div class="profile-programs d-flex flex-column">
   <div class="profile-programs-title mb-4">
-    <h3 class="m-0">meus programas de mentoria</h3>
+    <h3 class="m-0">my mentoring programs</h3>
   </div>
   <% if @user == current_user %>
     <% if current_user.programs.empty? %>
-      <p class="mb-5">você ainda não criou nenhum programa de mentoria</p>
+      <p class="mb-5">You haven't created any mentoring programs yet</p>
     <% else %>
       <div class="profile-programs-cards mb-5">
         <%= render "shared/card_small" %>
@@ -30,10 +30,10 @@
 <% if @user == current_user %>
   <div class="profile-subscriptions d-flex flex-column">
     <div class="profile-subscriptions-title mb-4">
-      <h3>minhas inscrições</h3>
+      <h3>my registrations</h3>
     </div>
     <% if current_user.mentorships.empty? %>
-      <p>você ainda não se inscreveu em nenhum programa de mentoria</p>
+      <p>You haven't signed up for any mentoring programs yet</p>
     <% else %>
       <div class="profile-subscriptions-cards mb-5">
         <%= render "shared/card_mentorship" %>
